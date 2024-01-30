@@ -4,7 +4,7 @@ date: 2023-04-24
 permalink: /posts/2023-self-normalized-rvs
 excerpt: 'I recently tweeted something very silly (redundant information, I know). The [tweet in question](https://twitter.com/mr_roberts_z/status/1650471367299440641) asked the following:
 
-<blockquote>Let $X_0$ be supported on some nonempty $A \subseteq \mathbb{N}^{>0}$ with $\mathbb{P}(X_0 = k) = p_{0,k}$ and $\mathbb{E}[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\mathbb{N}^{>0}$ by $\mathbb{P}(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$</blockquote>
+<blockquote>Let $X_0$ be supported on some nonempty $A \subseteq \mathbb{N}_{>0}$ with $\mathbb{P}(X_0 = k) = p_{0,k}$ and $\mathbb{E}[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\mathbb{N}_{>0}$ by $\mathbb{P}(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$</blockquote>
 
 ...then what?'
 tags:
@@ -15,9 +15,9 @@ $\newcommand{\E}{\mathbb{E}}$
 $\renewcommand{\P}{\mathbb{P}}$
 I recently tweeted something very silly (redundant information, I know). The [tweet in question](https://twitter.com/mr_roberts_z/status/1650471367299440641) asked the following:
 
-> Let $X_0$ be supported on some nonempty $A \subseteq \N^{>0}$ with $\P(X_0 = k) = p_{0,k}$ and $\E[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\N^{>0}$ by $\P(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$,
+> Let $X_0$ be supported on some nonempty $A \subseteq \N_{>0}$ with $\P(X_0 = k) = p_{0,k}$ and $\E[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\N_{>0}$ by $\P(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$,
 
-...then what? What happens to these random variables in the limit? I remember asking myself this years ago when I first learned about discrete random variables, and, given the simplicity of the formulation, I was surprised when a search for an answer yielded nothing.
+...then what? What happens to these random variables in the pointwise limit? I remember asking myself this years ago when I first learned about discrete random variables, and, given the simplicity of the formulation, I was surprised when a search for an answer yielded nothing.
 
 Anyways, the answer I tweeted, "<i>you will waste a huge amount of time</i>," was perhaps somewhat unsatisfying. This post is an attempt to do a little better.
 
