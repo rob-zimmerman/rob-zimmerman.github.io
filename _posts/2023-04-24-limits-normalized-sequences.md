@@ -17,7 +17,9 @@ I recently tweeted something very silly (redundant information, I know). The [tw
 
 > Let $X_0$ be supported on some nonempty $A \subseteq \N^{>0}$ with $\P(X_0 = k) = p_{0,k}$ and $\E[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\N^{>0}$ by $\P(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$,
 
-...then what? What happens to these random variables in the limit? The answer I tweeted, "<i>you will waste a huge amount of time</i>," was perhaps somewhat unsatisfying.
+...then what? What happens to these random variables in the limit? I remember asking myself this years ago when I first learned about discrete random variables, and, given the simplicity of the formulation, I was surprised when a search for an answer yielded nothing.
+
+Anyways, the answer I tweeted, "<i>you will waste a huge amount of time</i>," was perhaps somewhat unsatisfying. This post is an attempt to do a little better.
 
 Of course, the normalizing constant here is simply $\left(\sum_{k \in A} k \cdot p_{n-1,k} \right)^{-1} = \E[X_{n-1}]^{-1}$. So one way to look at this construction is to view the mass that $X_n$ places on $k$ as the corresponding (normalized) summand in the expectation of $X_{n-1}$. Observing that $p_{1,k} = \E[X_0]^{-1} \cdot k \cdot p_{0,k}$, we might suspect that this identity holds more generally, and in fact an easy induction argument shows this is true:
 
@@ -66,7 +68,7 @@ While the second sum in the parentheses is finite this time, we can be sure it's
 
 We can summarize our answer to the silly tweet question in a neat statement:
 
-<blockquote><b>Theorem:</b> Let $X_0$ be supported on some nonempty $A \subseteq \N^{>0}$ with $\P(X_0 = k) = p_{0,k}$ and $\E[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\N^{>0}$ by $\P(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$, the following holds:<br><br>
+<blockquote><b>Theorem:</b> Let $X_0$ be supported on some non-empty $A \subseteq \N^{>0}$ with $\P(X_0 = k) = p_{0,k}$ and $\E[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\N^{>0}$ by $\P(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$, the following holds:<br><br>
 
 1) If $|A| = \infty$, then $X_n$ diverges.<br> 
 2) If $|A| < \infty$, then $X_n$ converges to a point mass at $\max A$. </blockquote>
