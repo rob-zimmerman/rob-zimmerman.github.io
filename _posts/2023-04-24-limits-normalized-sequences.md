@@ -2,6 +2,11 @@
 title: 'Limits of Self-Normalized Random Variables'
 date: 2023-04-24
 permalink: /posts/2023-self-normalized-rvs
+excerpt: 'I recently tweeted something very silly (redundant information, I know). The [tweet in question](https://twitter.com/mr_roberts_z/status/1650471367299440641) asked the following:
+
+<blockquote>Let $X_0$ be supported on some nonempty $A \subseteq \mathbb{N}^{>0}$ with $\mathbb{P}(X_0 = k) = p_{0,k}$ and $\mathbb{E}[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\mathbb{N}^{>0}$ by $\mathbb{P}(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$</blockquote>
+
+...then what?'
 tags:
   - probability
 ---
@@ -12,7 +17,7 @@ I recently tweeted something very silly (redundant information, I know). The [tw
 
 > Let $X_0$ be supported on some nonempty $A \subseteq \N^{>0}$ with $\P(X_0 = k) = p_{0,k}$ and $\E[X_0] < \infty$. For each $n \geq 1$, recursively define $X_n$ on $\N^{>0}$ by $\P(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$,
 
-...then what? What happens to these random variables in the limit? This question has fascinated me since I was a child.
+...then what? What happens to these random variables in the limit? The answer I tweeted, "<i>you will waste a huge amount of time</i>," was perhaps somewhat unsatisfying.
 
 Of course, the normalizing constant here is simply $\left(\sum_{k \in A} k \cdot p_{n-1,k} \right)^{-1} = \E[X_{n-1}]^{-1}$. So one way to look at this construction is to view the mass that $X_n$ places on $k$ as the corresponding (normalized) summand in the expectation of $X_{n-1}$. Observing that $p_{1,k} = \E[X_0]^{-1} \cdot k \cdot p_{0,k}$, we might suspect that this identity holds more generally, and in fact an easy induction argument shows this is true:
 
