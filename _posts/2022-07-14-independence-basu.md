@@ -29,4 +29,4 @@ $(\Rightarrow)$: Suppose that $Y$ is independent of itself. Define the "paramete
 
 Unfortunately, this will not win the "most elegant proof" award for that direction of the theorem under the assumption of a finite first moment: since $Y$ is independent of itself, $\E[Y^2] = \E[Y] \cdot \E[Y] = \E[Y]^2$ so that $\text{Var}(Y) = \E[Y^2] - \E[Y]^2 = 0$ and the result follows.
 
-[^1]: One could reasonably protest that the argument here is not completely elementary because the statement $\P(X \geq 0) = 1 \implies (\E[X] = 0 \iff \P(X) = 0) = 1$ requires some basic measure theory to prove. But it's still much simpler than Kolmogorov's zero-one law!
+[^1]: One could reasonably protest that the argument here is not completely elementary because the statement $\P(X \geq 0) = 1 \implies \left(\E[X] = 0 \iff \P(X = 0) = 1 \right)$ requires some basic measure theory to prove. But it's still much simpler than Kolmogorov's zero-one law!
