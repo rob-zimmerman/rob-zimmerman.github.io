@@ -1,7 +1,7 @@
 ---
 title: 'Self-Independence by Ancillarity and Completeness'
-date: 2023-04-24
-permalink: /posts/2023-self-independence-ancillarity
+date: 2022-07-14
+permalink: /posts/2022-self-independence-ancillarity
 tags:
   - probability
 excerpt: 'Back in 2020, I taught [STA261](https://rob-zimmerman.github.io/teaching/STA261) for the first time. The first part of that course deals with statistics (i.e., functions of random samples, not the subject as a whole!) and I chose to provide a light introduction to completeness because of how elegant the [Lehmann-Scheffé theorem](https://en.wikipedia.org/wiki/Lehmann%E2%80%93Scheff%C3%A9_theorem) and related results in point estimation are down the road...'
