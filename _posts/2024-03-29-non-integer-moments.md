@@ -86,7 +86,7 @@ This result isn't quite groundbreaking, as Gwo Dong Lin proved something quite a
 
 > <b>Theorem 2:</b> Let $X$ and $Y$ be positive random variables, and suppose there exists some $\alpha > 0$ such that $\E[X^\alpha]$ and $\E[Y^\alpha] < \infty$. Let $\\{s_j\\}_{j=1}^\infty \subseteq (0, \infty)$ be a sequence of distinct numbers such that $s_j \to s \in (0, \alpha)$. If $\E[X^{s_j}] = \E[Y^{s_j}]$ for all $j$, then $X \stackrel{d}{=} Y$.
 
-The cost of the extra generality in Theorem 2 is that the statement requires some complex analysis to prove, whereas everything we did that led to Theorem 1 used simple probability theory[^7]. Nevertheless, Lin's proof is quite slick. Here's a sketch of it:
+The cost of the extra generality in Theorem 2 is that the statement requires some complex analysis to prove, whereas Theorem 1 implicitly hid all the complex analysis away in the mgf characterization result and used simple probability theory for the rest. Nevertheless, Lin's proof is quite slick. Here's a sketch of it:
 
 <i>Proof (sketch):</i> The assumptions imply that mgfs of $\log{X}$ and $\log{Y}$ viewed as functions over $\C$ --- that is, the functions $z \mapsto \E[X^z]$ and $z \mapsto \E[Y^z]$ --- are analytic in the strip $S = \\{z \in \C: 0 < \Re(z) < \alpha\\}$ (because $\E[X^\alpha], \E[Y^\alpha] < \infty$), and moreover these functions agree on $S$ as well (because the equality of moments assumption activates the [identity theorem](https://en.wikipedia.org/wiki/Identity_theorem)). A (right)-continuity argument then shows that the functions agree on $\\{z \in \C: \Re(z) = 0\\}$. Replacing $z$ with $it$ for $t \in \R$, we see that the <i>characteristic functions</i> of $\log{X}$ and $\log{Y}$ agree everywhere. Thus $\log{X} \stackrel{d}{=} \log{Y}$, and from that comes $X \stackrel{d}{=} Y$. $\square$
 
@@ -95,7 +95,6 @@ The cost of the extra generality in Theorem 2 is that the statement requires som
 [^2]: Heyde, Chris C. "On a property of the lognormal distribution." Journal of the Royal Statistical Society Series B: Statistical Methodology 25.2 (1963): 392-393.
 [^3]: Stoyanov, Jordan. "Stieltjes classes for moment-indeterminate probability distributions." Journal of Applied Probability 41.A (2004): 281-294.
 [^4]: Durrett, Rick. Probability: theory and examples. Vol. 49. Cambridge university press, 2019.
-[^5]: This can be proved using a similar technique as that used by Lin for Theorem 2 (essentially, by extending the mgf to the characteristic function via analytic continuation and then showing uniquness of that extension).
+[^5]: This can be proved using a similar technique as that used by Lin for Theorem 2, essentially by extending the mgf to the characteristic function via analytic continuation and then showing uniquness of that extension. The result then follows from the fact that distributions are characterized by their characteristic functions (i.e., Lévy's inversion formula).
 [^6]: Lin, Gwo Dong. "Characterizations of distributions via moments." Sankhyā: The Indian Journal of Statistics, Series A (1992): 128-132.
-[^7]: Of course, Theorems 1 and 2 both rely on the characterization of a distribution by its characteristic function (i.e., Lévy's inversion formula), which is not exactly simple to prove.
 
