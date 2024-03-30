@@ -2,7 +2,7 @@
 title: 'Non-Integer Moments and Distributions'
 date: 2024-03-29
 permalink: /posts/2024-non-integer-moments
-excerpt: 'Does there exist a distribution which is determined only by its non-integer moments? To put it another way, for $p \geq 0$, do there exist random variables $X$ and $Y$ supported on $(0, \infty)$ such that $\E[X^p] = \E[X^p]$ if and only if $p \not \in \N$?'
+excerpt: 'Does there exist a distribution which is determined only by its non-integer moments? To put it another way, for $p \geq 0$, do there exist random variables $X$ and $Y$ supported on $(0, \infty)$ such that $\mathbb{E}[X^p] = \mathbb{E}[X^p]$ if and only if $p \not \in \mathbb{N}$?'
 tags:
   - probability
 ---
@@ -64,7 +64,7 @@ Now, observe that for any $j \in \N$, we have
 
 $$\begin{align*}
 X^{p_j} &= X^{p_j} \cdot \one{X \in (0,1]} + X^{p_j} \cdot \one{X > 1} &&\\
-&\leq 1 + X^{p_j} \cdot \one{X > 1} &&\mbox{since $x^{p_j} \leq x \leq 1$ when $x \in (0,1]$}\\
+&\leq 1 + X^{p_j} \cdot \one{X > 1} &&\mbox{since $x^{p_j} \leq 1$ when $x \in (0,1]$}\\
 &\leq 1 + X^p \cdot \one{X > 1} &&\mbox{since $p_j \leq p$ implies $x^{p_j} \leq x^p$ when $x > 1$}\\
 &\leq 1 + X^p. &&
 \end{align*}$$
