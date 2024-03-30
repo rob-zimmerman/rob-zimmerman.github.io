@@ -12,14 +12,13 @@ $\newcommand{\E}{\mathbb{E}}$
 $\newcommand{\C}{\mathbb{C}}$
 $\renewcommand{\P}{\mathbb{P}}$
 $\newcommand{\one}[1]{\boldsymbol{1}_{#1}}$
-
 ## The Moment Problem
 
 In probability theory, a rigorous definition of expectation is followed almost immediately by a proof of the law of the unconscious statistician; following that, one is shown the definition of moments. One encounters integer moments throughout probability and statistics, while non-integer moments are substantially rarer. A natural question that arises is whether a distribution is characterized by its integer moments. That is, given a sequence of real numbers $\\{\mu_j\\} _{j=1}^\infty$, is there (at most) one distribution $F$ with $\mu_p = \int x^p \, \mathrm{d}F$? This question is called a <i>moment problem</i>.
 
 One learns by example that the answer is no, in general. Work on the moment problem reaches back to Stieltjes in 1894 (who himself invented the term <i>moment</i>), with precursors in Chebyshev and Markov.[^1] Using the theory of continued fractions, Stieltjes himself solved the moment problem for distributions supported on $(0, \infty)$, ultimately showing that it relied on the positivity of the determinants of what we now call [Hankel matrices](https://en.wikipedia.org/wiki/Hankel_matrix) built up from the prescribed moments (in the days before measure theory, Stieltjes' moments were defined by what we know today as Riemann-Stieltjes integrals). The standard counterexample came in 1963, when Chris Heyde asked about the moment problem for "commonly used distributions in statistics" and presented the famous log-normal family:[^2]
 
-> <b>Example 1:</b> If $X$ is a standard log-normal random variable --- that is, if $X$ has density $f(x) = \frac{1}{\sqrt{2\pi}x} \exp\left(-\frac{\log(x)^2}{2}\right)$ for $x \in \R$ --- then for all $\varepsilon \in [-1,1]$, the function $f \cdot (1 + \epsilon \cdot \sin(2\pi \log{x}))$ is also a density with the same moments as $X$.
+> <b>Example 1:</b> If $X$ is a standard log-normal random variable --- that is, if $X$ has density $f(x) = \frac{1}{\sqrt{2\pi}x} \exp\left(-\frac{\log(x)^2}{2}\right)$ for $x \in \R$ --- then for all $\varepsilon \in [-1,1]$, the function $f \cdot (1 + \varepsilon \cdot \sin(2\pi \log{x}))$ is also a density with the same moments as $X$.
 
 According to Stoyanov[^3], Stieltjes himself actually introduced that case in the same 1894 paper (in a non-statistical context, of course), so Heyde's example was apparently a rediscovery. Durrett[^4] gives us another ones:
 
