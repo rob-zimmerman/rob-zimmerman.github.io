@@ -78,15 +78,15 @@ Since $\E[1 + X^p] < \infty$, we see that the $X^{p_j}$ are dominated by an inte
 
 Taking $A = \R^{\geq 0} \setminus \N$ resolves the original question.
 
-The condition $\E[X^p] = \E[Y^p]$ for all $p \in \R$ is very strong. When all moments exist, this is equivalent to saying that $\E[e^{tX}] = \E[e^{tY}]$ for all $t \in \R$ (use the Lambert-$W$ function), which is the same as saying that the moment generating functions (mgfs) of $X$ and $Y$ are equal. Since mgfs characterize distributions --- when the mgfs exist --- this gives us a nice corollary:
+The condition $\E[X^p] = \E[Y^p]$ for all $p \in \R$ is very strong. When all moments exist, this is equivalent to saying that $\E[e^{tX}] = \E[e^{tY}]$ for all $t \in \R$ (use the Lambert-$W$ function), which is the same as saying that the moment generating functions (mgfs) of $X$ and $Y$ are equal. Since mgfs characterize distributions[^5] --- when the mgfs exist in a neighborhood of $0$  --- this gives us a nice characterization theorem as a simple corollary:
 
-> <b> Corollary:</b> Let $X$ and $Y$ be positive random variables. If $A \subseteq \R$ is dense in $\R$ and $\E[X^p] = \E[Y^p] < \infty$ for all $p \in A$, then $X \stackrel{d}{=} Y$. 
+> <b>Theorem 1:</b> Let $X$ and $Y$ be positive random variables. If $A \subseteq \R$ is dense in $\R$ and $\E[X^p] = \E[Y^p] < \infty$ for all $p \in A$, then $X \stackrel{d}{=} Y$. 
 
-This result isn't quite groundbreaking, as Gwo Dong Lin proved something quite a bit stronger in 1992:[^5]
+This result isn't quite groundbreaking, as Gwo Dong Lin proved something quite a bit stronger in 1992:[^6]
 
-> <b>Theorem:</b> Let $X$ and $Y$ be positive random variables, and suppose there exists some $\alpha > 0$ such that $\E[X^\alpha]$ and $\E[Y^\alpha] < \infty$. Let $\\{s_j\\}_{j=1}^\infty \subseteq (0, \infty)$ be a sequence of distinct numbers such that $s_j \to s \in (0, \alpha)$. If $\E[X^{s_j}] = \E[Y^{s_j}]$ for all $j$, then $X \stackrel{d}{=} Y$.
+> <b>Theorem 2:</b> Let $X$ and $Y$ be positive random variables, and suppose there exists some $\alpha > 0$ such that $\E[X^\alpha]$ and $\E[Y^\alpha] < \infty$. Let $\\{s_j\\}_{j=1}^\infty \subseteq (0, \infty)$ be a sequence of distinct numbers such that $s_j \to s \in (0, \alpha)$. If $\E[X^{s_j}] = \E[Y^{s_j}]$ for all $j$, then $X \stackrel{d}{=} Y$.
 
-Lin's proof is quite slick. Here's a sketch of it:
+The cost of the extra generality in Theorem 2 is that the statement requires some complex analysis to prove, whereas everything we did that led to Theorem 1 used simple probability theory[^7]. Nevertheless, Lin's proof is quite slick. Here's a sketch of it:
 
 <i>Proof (sketch):</i> The assumptions imply that mgfs of $\log{X}$ and $\log{Y}$ viewed as functions over $\C$ --- that is, the functions $z \mapsto \E[X^z]$ and $z \mapsto \E[Y^z]$ --- are analytic in the strip $S = \\{z \in \C: 0 < \Re(z) < \alpha\\}$ (because $\E[X^\alpha], \E[Y^\alpha] < \infty$), and moreover these functions agree on $S$ as well (because the equality of moments assumption activates the [identity theorem](https://en.wikipedia.org/wiki/Identity_theorem)). A (right)-continuity argument then shows that the functions agree on $\\{z \in \C: \Re(z) = 0\\}$. Replacing $z$ with $it$ for $t \in \R$, we see that the <i>characteristic functions</i> of $\log{X}$ and $\log{Y}$ agree everywhere. Thus $\log{X} \stackrel{d}{=} \log{Y}$, and from that comes $X \stackrel{d}{=} Y$. $\square$
 
@@ -95,5 +95,7 @@ Lin's proof is quite slick. Here's a sketch of it:
 [^2]: Heyde, Chris C. "On a property of the lognormal distribution." Journal of the Royal Statistical Society Series B: Statistical Methodology 25.2 (1963): 392-393.
 [^3]: Stoyanov, Jordan. "Stieltjes classes for moment-indeterminate probability distributions." Journal of Applied Probability 41.A (2004): 281-294.
 [^4]: Durrett, Rick. Probability: theory and examples. Vol. 49. Cambridge university press, 2019.
-[^5]: Lin, Gwo Dong. "Characterizations of distributions via moments." Sankhyā: The Indian Journal of Statistics, Series A (1992): 128-132.
+[^5]: This can be proved using a similar technique as that used by Lin for Theorem 2 (essentially, by extending the mgf to the characteristic function via analytic continuation and then showing uniquness of that extension).
+[^6]: Lin, Gwo Dong. "Characterizations of distributions via moments." Sankhyā: The Indian Journal of Statistics, Series A (1992): 128-132.
+[^7]: Of course, Theorems 1 and 2 both rely on the characterization of a distribution by its characteristic function (i.e., Lévy's inversion formula), which is not exactly simple to prove.
 
