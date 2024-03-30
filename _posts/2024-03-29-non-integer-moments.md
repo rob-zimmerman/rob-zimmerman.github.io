@@ -78,7 +78,7 @@ Since $\E[1 + X^p] < \infty$, we see that the $X^{p_j}$ are dominated by an inte
 
 Taking $A = \R^{\geq 0} \setminus \N$ resolves the original question.
 
-The condition $\E[X^p] = \E[Y^p]$ for all $p \in \R$ is very strong. When all moments exist, this is equivalent to saying that $\E[e^{tX}] = \E[e^{tY}]$ for all $t \in \R$ (use the Lambert-$W$ function), which is the same as saying that the moment generating functions (mgfs) of $X$ and $Y$ are equal. Since mgfs characterize distributions[^5] --- when the mgfs exist in a neighborhood of $0$  --- this gives us a nice characterization theorem as a simple corollary:
+The condition $\E[X^p] = \E[Y^p]$ for all $p \in \R$ is very strong. When all moments exist, this is equivalent to saying that $\E[e^{tX}] = \E[e^{tY}]$ for all $t \in \R$ via the transformation $t = p \cdot \log(X)/X$, which is the same as saying that the moment generating functions (mgfs) of $X$ and $Y$ are equal. Since mgfs characterize distributions[^5] --- when the mgfs exist in a neighborhood of $0$  --- this gives us a nice characterization theorem as a simple corollary:
 
 > <b>Theorem 1:</b> Let $X$ and $Y$ be positive random variables. If $A \subseteq \R$ is dense in $\R$ and $\E[X^p] = \E[Y^p] < \infty$ for all $p \in A$, then $X \stackrel{d}{=} Y$. 
 
