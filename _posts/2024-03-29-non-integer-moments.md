@@ -88,7 +88,7 @@ Lin's proof is quite slick. Here's a sketch of it:
 
 [^1]: Shohat, James Alexander, and Jacob David Tamarkin. The problem of moments. Vol. 1. American Mathematical Society (RI), 1950.
 [^2]: Heyde, Chris C. "On a property of the lognormal distribution." Journal of the Royal Statistical Society Series B: Statistical Methodology 25.2 (1963): 392-393.
-[^3]: Durrett, Rick. Probability: theory and examples. Vol. 49. Cambridge university press, 2019.
-[^4]: Stoyanov, Jordan. "Stieltjes classes for moment-indeterminate probability distributions." Journal of Applied Probability 41.A (2004): 281-294.
+[^3]: Stoyanov, Jordan. "Stieltjes classes for moment-indeterminate probability distributions." Journal of Applied Probability 41.A (2004): 281-294.
+[^4]: Durrett, Rick. Probability: theory and examples. Vol. 49. Cambridge university press, 2019.
 [^5]: Lin, Gwo Dong. "Characterizations of distributions via moments." Sankhyā: The Indian Journal of Statistics, Series A (1992): 128-132.
 
