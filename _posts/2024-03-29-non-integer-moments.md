@@ -78,7 +78,7 @@ Since $\E[1 + X^p] < \infty$, we see that the $X^{p_j}$ are dominated by an inte
 
 Taking $A = \R^{\geq 0} \setminus \N$ resolves the original question.
 
-The condition $\E[X^p] = \E[Y^p]$ for all $p \in \R$ is very strong. When all moments exist, this is equivalent to saying that $\E[e^{tX}] = \E[e^{tY}]$ for all $t \in \R$ via the transformation $t = p \cdot \log(X)/X$, which is the same as saying that the moment generating functions (mgfs) of $X$ and $Y$ are equal. Since mgfs characterize distributions[^5] --- when the mgfs exist in a neighborhood of $0$  --- this gives us a nice characterization theorem as a simple corollary:
+The condition $\E[X^p] = \E[Y^p]$ for all $p \in \R$ is very strong. When all of those moments are finite, this is equivalent to saying that $\E[e^{tX}]$ exists and equals $\E[e^{tY}]$ for all $t \in \R$ via the transformation $t = p \cdot \log(X)/X$, which is the same as saying that the moment generating functions (mgfs) of $X$ and $Y$ exist everywhere and are equal. Since mgfs characterize distributions when the mgfs exist in a neighborhood of $0$,[^5] this gives us a nice characterization theorem as a simple corollary:
 
 > <b>Theorem 1:</b> Let $X$ and $Y$ be positive random variables. If $A \subseteq \R$ is dense in $\R$ and $\E[X^p] = \E[Y^p] < \infty$ for all $p \in A$, then $X \stackrel{d}{=} Y$. 
 
@@ -88,7 +88,7 @@ This result isn't quite groundbreaking, as Gwo Dong Lin proved something quite a
 
 The cost of the extra generality in Theorem 2 is that the statement requires some complex analysis to prove, whereas Theorem 1 implicitly hid all the complex analysis away in the mgf characterization result and used simple probability theory for the rest. Nevertheless, Lin's proof is quite slick. Here's a sketch of it:
 
-<i>Proof (sketch):</i> The assumptions imply that mgfs of $\log{X}$ and $\log{Y}$ viewed as functions over $\C$ --- that is, the functions $z \mapsto \E[X^z]$ and $z \mapsto \E[Y^z]$ --- are analytic in the strip $S = \\{z \in \C: 0 < \Re(z) < \alpha\\}$ (because $\E[X^\alpha], \E[Y^\alpha] < \infty$), and moreover these functions agree on $S$ as well (because the equality of moments assumption activates the [identity theorem](https://en.wikipedia.org/wiki/Identity_theorem)). A (right)-continuity argument then shows that the functions agree on $\\{z \in \C: \Re(z) = 0\\}$. Replacing $z$ with $it$ for $t \in \R$, we see that the <i>characteristic functions</i> of $\log{X}$ and $\log{Y}$ agree everywhere. Thus $\log{X} \stackrel{d}{=} \log{Y}$, and from that comes $X \stackrel{d}{=} Y$. $\square$
+<i>Proof (sketch):</i> The assumptions imply that mgfs of $\log{X}$ and $\log{Y}$ viewed as functions over $\C$ --- that is, the functions $z \mapsto \E[X^z]$ and $z \mapsto \E[Y^z]$ --- are analytic in the strip $S = \\{z \in \C: 0 < \Re(z) < \alpha\\}$ (because $\E[X^\alpha], \E[Y^\alpha] < \infty$), and moreover these functions agree on $S$ as well (because the equality of moments assumption activates the [identity theorem](https://en.wikipedia.org/wiki/Identity_theorem)). A (right)-continuity argument then shows that the functions agree on $\\{z \in \C: \Re(z) = 0\\}$. Replacing $z$ with $it$ for $t \in \R$, we see that the characteristic functions of $\log{X}$ and $\log{Y}$ agree everywhere. Thus $\log{X} \stackrel{d}{=} \log{Y}$, and from that comes $X \stackrel{d}{=} Y$. $\square$
 
 
 [^1]: Shohat, James Alexander, and Jacob David Tamarkin. The problem of moments. Vol. 1. American Mathematical Society (RI), 1950.
