@@ -20,7 +20,7 @@ One learns by example that the answer is no, in general. Work on the moment prob
 
 > <b>Example 1:</b> If $X$ is a standard log-normal random variable --- that is, if $X$ has density $f(x) = \frac{1}{\sqrt{2\pi}x} \exp\left(-\frac{\log(x)^2}{2}\right)$ for $x \in \R$ --- then for all $\varepsilon \in [-1,1]$, the function $f \cdot (1 + \varepsilon \cdot \sin(2\pi \log{x}))$ is also a density with the same moments as $X$.
 
-According to Stoyanov[^3], Stieltjes himself actually introduced that case in the same 1894 paper (in a non-statistical context, of course), so Heyde's example was apparently a rediscovery. Durrett[^4] gives us another ones:
+According to Stoyanov[^3], Stieltjes himself actually introduced that case in the same 1894 paper (in a non-statistical context, of course), so Heyde's example was apparently a rediscovery. Durrett[^4] gives us another one:
 
 > <b>Example 2:</b> Let $\lambda \in (0,1)$. If $X$ has density $f(x) = \left(\int \exp(-\|x\|^\lambda) \, \mathrm{d}x \right)^{-1} \exp\left(-\|x\|^{\lambda}\right)$ for $x \in \R$, then for all $\varepsilon \in [-1,1]$, the function $f \cdot (1 + \varepsilon \cdot \sin( \tan(\lambda \pi /2) \cdot \|x\|^\lambda \cdot \mathrm{sgn}(x)))$ is also a density with the same moments as $X$.
 
@@ -33,12 +33,12 @@ Going through the explicit proofs of Examples 1 and 2 in Durrett's book, I was s
 
 > <b>Proposition:</b> Let $X$ and $Y$ be positive random variables. If $A \subseteq \R$ is dense in $\R$ and $\E[X^p] = \E[Y^p]$ for all $p \in A$, then $\E[X^p] = \E[Y^p]$ for all $p \in \R$.
 
-<i>Proof:</i> Fix $p \in \R$ and let $\\{p_j\\}_{j=1}^\infty \subseteq A$ be a sequence with $p_j \nearrow p$ as $j \to \infty$, which must exist by the density of $A$ in $\R$. We have two cases to consider: either $\E[X^p] = \infty$ or $\E[X^p] < \infty$. The first case is fairly easy to handle, while the second is only a bit trickier.
+<i>Proof:</i> Fix $p \in \R$. We have two cases to consider: either $\E[X^p] = \infty$ or $\E[X^p] < \infty$. The first case is fairly easy to handle, while the second is only a bit trickier.
 
 
 <u> Case 1: $\E[X^p] = \infty$</u>.
 
-Fix a sequence $\\{q_j\\}_{j=1}^\infty$ such that $q_j \to 0$ and $p + q_j \in A$ for all $j$ (we can do this, again, because $A$ is dense in $\R$). We have that
+Fix a sequence $\\{q_j\\}_{j=1}^\infty$ such that $q_j \to 0$ and $p + q_j \in A$ for all $j$ (we can do this because $A$ is dense in $\R$). We have that
 
 $$\begin{align*}
 \infty &= \E[X^p] &&\\
@@ -65,7 +65,7 @@ $$\begin{align*}
 &< \infty. &&
 \end{align*}$$
 
-Now, observe that for any $j \in \N$, we have
+Now, let $\\{p_j\\}_{j=1}^\infty \subseteq A$ be a third sequence with $p_j \nearrow p$ as $j \to \infty$. Observe that for any $j \in \N$, we have
 
 $$\begin{align*}
 X^{p_j} &= X^{p_j} \cdot \one{X \in (0,1]} + X^{p_j} \cdot \one{X > 1} &&\\
