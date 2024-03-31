@@ -20,11 +20,11 @@ One learns by example that the answer is no, in general. Work on the moment prob
 
 > <b>Example 1:</b> If $X$ is a standard log-normal random variable --- that is, if $X$ has density $f(x) = \frac{1}{\sqrt{2\pi}x} \exp\left(-\frac{\log(x)^2}{2}\right)$ for $x \in \R$ --- then for all $\varepsilon \in [-1,1]$, the function $f \cdot (1 + \varepsilon \cdot \sin(2\pi \log{x}))$ is also a density with the same moments as $X$.
 
-According to Stoyanov[^3], Stieltjes himself actually introduced that case in the same 1894 paper (in a non-statistical context, of course), so Heyde's example was apparently a rediscovery. Durrett[^4] gives us another one:
+According to Stoyanov[^3], Stieltjes himself actually introduced that case in the same 1894 paper as his "moment" introduction (in a non-statistical context, of course), so Heyde's example was apparently a rediscovery. Durrett[^4] gives us another one:
 
 > <b>Example 2:</b> Let $\lambda \in (0,1)$. If $X$ has density $f(x) = \left(\int \exp(-\|x\|^\lambda) \, \mathrm{d}x \right)^{-1} \exp\left(-\|x\|^{\lambda}\right)$ for $x \in \R$, then for all $\varepsilon \in [-1,1]$, the function $f \cdot (1 + \varepsilon \cdot \sin( \tan(\lambda \pi /2) \cdot \|x\|^\lambda \cdot \mathrm{sgn}(x)))$ is also a density with the same moments as $X$.
 
-It turns out that this idea generalizes to <i>Stieltjes classes</i>:[^3] if $f$ is a density and $h$ is a non-zero continuous function taking values in $[-1,1]$ such that $\E_{X \sim f}[h(X) \cdot X^n] = 0$ for all $n \in \N$, then for all $\epsilon \in [-1,1]$, the function $f_\varepsilon = f \cdot (1 + \varepsilon \cdot h)$ is a density with the same moments as $f$. The conditions required of $h$ essentially forces it to be periodic, as it is in the two examples above.
+Examples 1 and 2 obviously share a similar theme. It turns out that the idea generalizes to <i>Stieltjes classes</i>:[^3] if $f$ is a density whose integer moments exist and $h$ is a non-zero continuous function taking values in $[-1,1]$ such that $\E_{X \sim f}[h(X) \cdot X^n] = 0$ for all $n \in \N$, then for all $\varepsilon \in [-1,1]$, the function $f_\varepsilon = f \cdot (1 + \varepsilon \cdot h)$ is a density with the same moments as $f$. The conditions required of $h$ essentially forces it to be periodic, as it is in the two examples above.
 
 
 ## Non-Integer Moments
@@ -84,7 +84,7 @@ The condition $\E[X^p] = \E[Y^p]$ for all $p \in \R$ is very strong. But is it e
 
 > <b>Theorem 1:</b> Let $X$ and $Y$ be positive random variables. If $A \subseteq \R$ is dense in $\R$ and $\E[X^p] = \E[Y^p] < \infty$ for all $p \in A$, then $X \stackrel{d}{=} Y$. 
 
-The proof follows along the same lines as that of a theorem of Gwo Dong Lin from 1992:[^5]
+The proof follows along the same lines as that of a stronger theorem of Gwo Dong Lin from 1992:[^5]
 
 > <b>Theorem 2:</b> Let $X$ and $Y$ be positive random variables, and suppose there exists some $\alpha > 0$ such that $\E[X^\alpha]$ and $\E[Y^\alpha] < \infty$. Let $\\{s_j\\}_{j=1}^\infty \subseteq (0, \infty)$ be a sequence of distinct numbers such that $s_j \to s \in (0, \alpha)$. If $\E[X^{s_j}] = \E[Y^{s_j}]$ for all $j$, then $X \stackrel{d}{=} Y$.
 
