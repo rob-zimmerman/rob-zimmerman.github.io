@@ -65,7 +65,7 @@ $$\begin{align*}
 &< \infty. &&
 \end{align*}$$
 
-Now, let $\\{p_j\\}_{j=1}^\infty \subseteq A$ be a third sequence with $p_j \nearrow p$ as $j \to \infty$. Observe that for any $j \in \N$, we have
+Now, let $\\{p_j\\}_{j=1}^\infty \subseteq A$ be a yet another sequence with $p_j \nearrow p$ as $j \to \infty$. Observe that for any $j \in \N$, we have
 
 $$\begin{align*}
 X^{p_j} &= X^{p_j} \cdot \one{X \in (0,1]} + X^{p_j} \cdot \one{X > 1} &&\\
