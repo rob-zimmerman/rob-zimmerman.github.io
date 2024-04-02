@@ -23,7 +23,7 @@ Anyways, the answer I tweeted, "<i>you will waste a huge amount of time</i>," wa
 
 Of course, the normalizing constant here is simply $\left(\sum_{k \in A} k \cdot p_{n-1,k} \right)^{-1} = \E[X_{n-1}]^{-1}$. So one way to look at this construction is to view the mass that $X_n$ places on $k$ as the corresponding (normalized) summand in the expectation of $X_{n-1}$. Observing that $p_{1,k} = \E[X_0]^{-1} \cdot k \cdot p_{0,k}$, we might suspect that this identity holds more generally provided that all moments exist[^1], and in fact an easy induction argument shows this is true:
 
-> <b>Proposition:</b> For all $n \geq 1$, we have $p_{n,k} = \E[X_0^n]^{-1} \cdot k^n \cdot p_{0,k}$.
+> <b>Proposition:</b> For all $n \geq 1$, we have $p_{n,k} = \E[X_0^n]^{-1} \cdot k^n \cdot p_{0,k}$, provided that $\E[X_0^n] < \infty$.
 
 <i>Proof:</i> The base case $n=1$ is obvious. Now, assume that $p_{n-1,k} = \E[X_0^{n-1}]^{-1} \cdot k^{n-1} \cdot p_{0,k}$. Then, simply plugging this in, cancelling out normalizing constants and manipulating gives us
 
@@ -73,4 +73,4 @@ We can summarize our answer to the silly tweet question in a neat statement:
 1) If $|A| = \infty$, then $X_n$ diverges.<br> 
 2) If $|A| < \infty$, then $X_n$ converges to a point mass at $\max A$. </blockquote>
 
-[^1]: This assumption was missing from the original tweet (and this post). Thanks to [https://yanbotang.github.io/](Yanbo) for noticing!
+[^1]: This assumption was missing from the original tweet (and this post). Thanks [Yanbo](https://yanbotang.github.io/), for noticing!
