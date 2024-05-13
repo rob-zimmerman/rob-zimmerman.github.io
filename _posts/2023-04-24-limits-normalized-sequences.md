@@ -21,7 +21,7 @@ I recently tweeted something very silly (redundant information, I know). The [tw
 
 Anyways, the answer I tweeted, "<i>you will waste a huge amount of time</i>," was perhaps somewhat unsatisfying. This post is an attempt to do a little better.
 
-Of course, the normalizing constant here is simply $\left(\sum_{k \in A} k \cdot p_{n-1,k} \right)^{-1} = \E[X_{n-1}]^{-1}$. So one way to look at this construction is to view the mass that $X_n$ places on $k$ as the corresponding (normalized) summand in the expectation of $X_{n-1}$. Observing that $p_{1,k} = \E[X_0]^{-1} \cdot k \cdot p_{0,k}$, we might suspect that this identity holds more generally provided that all moments exist[^1], and in fact an easy induction argument shows this is true:
+Of course, the normalizing constant here is simply $\left(\sum_{k \in A} k \cdot p_{n-1,k} \right)^{-1} = \E[X_{n-1}]^{-1}$. So one way to look at this construction is to view the mass that $X_n$ places on $k$ as the corresponding (normalized) summand in the expectation of $X_{n-1}$. Observing that $p_{1,k} = \E[X_0]^{-1} \cdot k \cdot p_{0,k}$, we might suspect that this identity holds more generally provided that all moments exist,[^1] and in fact an easy induction argument shows this is true:
 
 > <b>Proposition:</b> For all $n \geq 1$, we have $p_{n,k} = \E[X_0^n]^{-1} \cdot k^n \cdot p_{0,k}$, provided that $\E[X_0^n] < \infty$.
 
