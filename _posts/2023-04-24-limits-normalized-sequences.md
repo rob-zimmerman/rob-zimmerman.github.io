@@ -19,7 +19,7 @@ I recently tweeted something very silly (redundant information, I know). The [tw
 
 ...then what? What happens to these random variables in the pointwise limit? I remember asking myself this years ago when I first learned about discrete random variables, and, given the simplicity of the formulation, I was surprised when a search for an answer yielded nothing.
 
-Anyways, the answer I tweeted, "<i>you will waste a huge amount of time</i>," was perhaps somewhat unsatisfying. This post is an attempt to do a little better.
+Anyway, the [answer](https://twitter.com/mr_roberts_z/status/1650471533293322240) I tweeted was perhaps somewhat unsatisfying. This post is an attempt to do a little better.
 
 Of course, the normalizing constant here is simply $\left(\sum_{k \in A} k \cdot p_{n-1,k} \right)^{-1} = \E[X_{n-1}]^{-1}$. So one way to look at this construction is to view the mass that $X_n$ places on $k$ as the corresponding (normalized) summand in the expectation of $X_{n-1}$. Observing that $p_{1,k} = \E[X_0]^{-1} \cdot k \cdot p_{0,k}$, we might suspect that this identity holds more generally provided that all moments exist,[^1] and in fact an easy induction argument shows this is true:
 
@@ -60,7 +60,7 @@ p_{n,k^*} &=  \left( \sum_{\substack{i \in A \\ i \neq k^*}} \left(\frac{i}{k^*}
 &\xrightarrow{n \to \infty} 1.
 \end{align*}$$
 
-That is, $\P(X_n = k^* ) \xrightarrow{n \to \infty} 1$. We can also see this with an approach from the other direction: for any $k \in A$ with $k < k^* $, then we return to the situation of $\eqref{eq:ineq}$: 
+That is, $\P(X_n = k^* ) \xrightarrow{n \to \infty} 1$. We can also see this with an approach from the other direction. For any $k \in A$ with $k < k^* $, we return to the situation of $\eqref{eq:ineq}$: 
 
 $$ \begin{equation*} p_{n,k} \leq \left(\sum_{\substack{i \in A \\ i < k}} \left(\frac{i}{k} \right)^n \cdot \frac{p_{0,i}}{p_{0,k}} + 1 +  \left(\frac{k+1}{k} \right)^n \cdot \sum_{\substack{j \in A \\ j > k}} \frac{p_{0,j}}{p_{0,k}}\right)^{-1} \xrightarrow{n \to \infty} 0. \end{equation*} $$
 
@@ -70,7 +70,7 @@ We can summarize our answer to the silly tweet question in a neat statement:
 
 <blockquote><b>Theorem:</b> Let $X_0$ be supported on some non-empty $A \subseteq \N^{>0}$ with $\P(X_0 = k) = p_{0,k}$ and $\E[X_0^n] < \infty$ for all $n \in \N$. For each $n \geq 1$, recursively define $X_n$ on $\N^{>0}$ by $\P(X_n = k) = c_n \cdot k \cdot p_{n-1,k}$, where $c_n$ is a normalizing constant. Then, as $n \to \infty$, the following holds:<br><br>
 
-1) If $|A| = \infty$, then $X_n$ diverges.<br> 
+1) If $|A| = \infty$, then $X_n$ does not converge.<br> 
 2) If $|A| < \infty$, then $X_n$ converges to a point mass at $\max A$. </blockquote>
 
 [^1]: This assumption was missing from the original tweet (and this post). Thanks [Yanbo](https://yanbotang.github.io/), for noticing!
