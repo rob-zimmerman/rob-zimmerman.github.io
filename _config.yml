@@ -5,6 +5,13 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# Publication Category - The following the list of publication categories and their headings
+publication_category:
+  articles:
+    title: 'Articles'    
+  projects:
+    title: 'Course Projects'
+
 # Site Settings
 locale                   : "en-US"
 title                    : "Robert Zimmerman"
@@ -82,12 +89,12 @@ analytics:
 author:
   name             : "Robert Zimmerman"
   avatar           : "RZ.jpg"
-  bio              : "PhD Candidate in Statistics at the University of Toronto"
-  location         : "Toronto, ON, Canada"
+  bio              : "Research Associate at Imperial College London"
+  location         : "London, UK"
   employer         :
   pubmed           :
   googlescholar    :
-  email            : "robert.zimmerman@mail.utoronto.ca"
+  email            : "r.zimmerman23@imperial.ac.uk"
   researchgate     :
   uri              :
   bitbucket        :

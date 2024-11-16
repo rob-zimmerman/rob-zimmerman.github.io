@@ -1,0 +1,35 @@
+---
+layout: archive
+title: "Publications and Projects"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
+
+{% include base_path %}
+
+<!-- Render only 'articles' and 'projects' categories -->
+{% assign selected_categories = "articles,projects" | split: "," %}
+{% for category_key in selected_categories %}
+  {% assign title_shown = false %}
+  {% for category in site.publication_category %}
+    {% if category[0] == category_key %}
+      {% for post in site.publications reversed %}
+        {% if post.category != category[0] %}
+          {% continue %}
+        {% endif %}
+        {% unless title_shown %}
+          <h2>{{ category[1].title }}</h2><hr />
+          {% if category_key == "projects" %}
+            <p><em>As part of the direct-entry PhD program at the University of Toronto, I was required to complete a year of graduate coursework in addition to the standard PhD requirements. I was fortunate to have access to a diverse selection of engaging courses, all taught by exceptional professors. Each of these courses included a significant project or report, which I approached with the same dedication as any research endeavor. I’ve included these projects here in case they might be of interest to others. (Note: I take no responsibility for any mistakes I may have made.)</em></p>
+          {% endif %}
+          {% assign title_shown = true %}
+        {% endunless %}
+        {% include archive-single.html %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
