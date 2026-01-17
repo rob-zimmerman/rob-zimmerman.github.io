@@ -3,7 +3,7 @@ title: "A Tractable Family of Smooth Copulas with Rotational Dependence: Propert
 collection: publications
 category: articles
 permalink: /publication/2025-09-30-tractable-family-of-smooth-copulas
-excerpt:  <i>Submitted</i>
+excerpt:  '<i>Submitted</i>
 
 We introduce a new versatile family of copulas built from univariate distributions that yields interpretable multivariate dependence structures with rotational features, together with inference methods that reduce multivariate estimation to univariate problems and demonstrate strong performance in simulations and a neural connectivity application. Joint work with [Michaël Lalancette](https://mic-lalancette.github.io/).'
 date: 2025-09-30

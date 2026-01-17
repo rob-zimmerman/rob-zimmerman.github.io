@@ -3,7 +3,7 @@ title: "A New Family of Smooth Copulas with Arbitrarily Irregular Densities"
 collection: publications
 category: articles
 permalink: /publication/2022-04-12-new-family-smooth-copulas
-excerpt:
+excerpt:'
 
 We construct a family of absolutely continuous copulas whose members can exhibit highly pathological behaviour. Joint work with [Michaël Lalancette](https://mic-lalancette.github.io/).'
 date: 2022-04-12
