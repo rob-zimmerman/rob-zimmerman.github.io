@@ -4,7 +4,9 @@ date: 2026-01-17
 permalink: /posts/2026-find-the-fox
 excerpt: 'Since it was published in 2024, Alex Cheddar''s book [<i>Find the Fox: the Almost Impossible Word Search</i>](https://alexcheddar.com/) has become quite popular for its difficulty and novelty. If you haven''t heard of this book, the concept is very simple: it''s a word search where the grid consists solely of the letters F, O, and X. There''s only one word to find: FOX, which appears once among all 200 pages of the book...'
 tags:
-  - MCMC, graphs, probability
+  - MCMC
+  - graphs
+  - probability
 ---
 $\newcommand{\N}{\mathbb{N}}$
 $\newcommand{\R}{\mathbb{R}}$
