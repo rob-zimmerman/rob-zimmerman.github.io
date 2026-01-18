@@ -99,7 +99,7 @@ For each combination, we have a set of letter constraints on the union of the ce
 
 $$
 \mathbb{P}(A_i \cap A_j)
-= \sum_{c \in C} \mathbf{1}_{\{ \text{combo } c \text{ is consistent for } (i,j) \}}\, \cdot 3^{-m}. \notag
+= \sum_{c \in C} \mathbf{1}_{\{ \text{combination } c \text{ is consistent for } (i,j) \}}\, \cdot 3^{-m}. \notag
 $$
 
 We thus compute:
@@ -158,7 +158,7 @@ There's another way to sample exactly from our target distribution, this time us
 
 ## Approximate Sampling
 
-Instead of trying to sample from $\pi$ directly, what if we start off with <i>some</i> valid grid, and then modify it so that it looks like it came from $\pi$? This is where we can exploit MCMC. We will define a symmetric random walk on the space of valid grids, where each step makes a tiny local random change but does <i>not</i> violate the constraint. Generating a valid grid (call it $G_0 \in \Omega$) is easy for initialization: for example, the grid consisting entirely of $F$s is perfectly valid. Let's now construct our Markov chain. At the $t$th iteration of our sampler, we'll do the following:
+Instead of trying to sample from $\pi$ directly, what if we start off with <i>some</i> valid grid, and then modify it so that it looks like it came from $\pi$? This is where we can exploit MCMC. We will define a symmetric random walk on $\Omega$, where each step makes a tiny local random change but does <i>not</i> violate the constraint. Generating a valid grid (call it $G_0 \in \Omega$) is easy for initialization purposes: for example, the grid consisting entirely of $F$s is perfectly valid. Let's now construct our Markov chain. At the $t$th iteration of our sampler, we'll do the following:
 1. With probability $1/2$, set $G_{t+1} = G_t$ and continue onto iteration $t+1$. Otherwise, proceed:
 2. Choose a cell $(i,j)$ in $G_t$ uniformly at random
 3. Propose changing the letter in that cell to one of the other two letters (chosen uniformly)
@@ -179,7 +179,7 @@ $$\pi(G) \cdot \P(G \to G') = \pi(G') \cdot \P(G' \to G).\notag$$
 
 So the detailed balance condition is satisfied, and $\pi$ is indeed stationary for our Markov chain.
 
-One tricky issue remains: that of irreducibility. In order to guarantee that the law $G_t$ will actually converge to $\pi$ as $t \to \infty$, we need to show that our chain is irreducible: any valid grid should be reachable from any other via valid single-cell flips. Equivalently, if we form a graph $\mathcal{G}$ whose vertices are grids in $\Omega$ and draw an edge between vertices $G$ and $G'$ iff the grids differ in exactly one cell, then we need to show that $\mathcal{G}$ is connected. Fortunately, we can prove this. 
+One tricky issue remains: that of irreducibility. In order to guarantee that the law of $G_t$ will actually converge to $\pi$ as $t \to \infty$, we need to show that our chain is irreducible: any valid grid should be reachable from any other via valid single-cell flips. Equivalently, if we form a graph $\mathcal{G}$ whose vertices are grids in $\Omega$ and draw an edge between vertices $G$ and $G'$ iff the grids differ in exactly one cell, then we need to show that $\mathcal{G}$ is connected. Fortunately, with some care we can prove this. To be general, we'll prove the result for any grid size.
 
 For some setup, fix integers $h,w \geq 1$ and identify grid cells with coordinates $(r,c)$ where $r \in \{1,\ldots,h\}$ and $c \in \{1,\ldots,w\}$. A length-$3$ line segment is any triple of distinct cells of the form 
 
@@ -191,7 +191,7 @@ $$(\delta_r, \delta_c) \in \{(-1,0), (1,0), (0,-1), (0,1), (-1,-1), (-1,1), (1,-
 
 and all three cells lie in the grid. Define a valid single-cell flip to be an operation that changes the letter in exactly one cell and results in another grid in $\Omega$. We order the cells in row-major order: $(r,c) \prec (r',c')$ if either $r < r'$ or $r = r'$ and $c < c'$. Let $C_1, C_2, \ldots, C_{hw}$ denote the cells in this order. $G(C_i)$ refers to the letter in the $i$th cell of $G$.
 
-> <b>Proposition:</b> For every $G \in \Omega$, the exists a sequence of valid single-cell flips that transforms $G$ into the all-$O$ grid. Consequently, $\mathcal{G}$ is connected.
+> <b>Proposition:</b> For every $G \in \Omega$, there exists a sequence of valid single-cell flips that transforms $G$ into the all-$O$ grid. Consequently, $\mathcal{G}$ is connected.
 
 <i>Proof:</i> We will explicitly construct a valid path from an arbitrary $G \in \Omega$ to the all-$O$ grid. We process cells in row-major order. For $i = 1, 2,\ldots, hw$, at step $i$ we change the value of cell $C_i$ to $O$ if it's not already $O$. Fix $i$ and let $G^{(i)}$ denote the grid after step $i$, with $G^{(0)} := G$. It is immediate that $G^{(i)}(C_j) = O$ for all $j \leq i$ (i.e., this is an invariant). We will show by induction that $G^{(i)} \in \Omega$. Consider the transition $G^{(i-1)} \to G^{(i)}$, where we set $C_i$ to $O$. Any newly created forbidden pattern $FOX$ or $XOF$ would need to involve $C_i$, since all other cells are unchanged. Moreover, $O$ must appear in the middle of such a triple. Therefore, if setting $C_i$ to $O$ creates a forbidden pattern, then $C_i$ must be the center cell of some length-$3$ line segment whose two opposite neighbors have labels $F$ and $X$ in $G^{(i)}$. 
 
