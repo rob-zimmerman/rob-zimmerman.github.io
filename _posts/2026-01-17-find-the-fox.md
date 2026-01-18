@@ -85,9 +85,9 @@ segments --- for the presence of the strings $FOX$ and $XOF$. For each segment, 
 
 $$p_\text{acc} \leq \left(1 - \frac{2}{127}\right)^{192} \approx 3.83 \times 10^{-7}.\notag$$ 
 
-So the acceptance rate is at most about one in 2.6 million, which doesn't seem horrible if we're running our code on a peppy, multithreaded processor and we're willing to wait for a few days. In fact, this bound is misleadingly optimistic --- in fact, it overstates the probability by a factor of over <i>300 octillion</i>.
+So the acceptance rate is at most about one in 2.6 million, which doesn't seem horrible if we're running our code on a peppy, multithreaded processor and we're willing to wait for a few days. In fact, this bound is misleadingly optimistic --- in fact, it overstates the probability by a factor of over 300 octillion.
 
-To do better, we can invoke <i>Janson's inequality</i>,[^2] which provides exponential upper bounds on the probability that none of a large collection of weakly dependent “bad” events occur, in terms of their expected count and the sum of their pairwise dependencies. Let $A_i$ be the event that segment $i$ is $FOX$ or $XOF$. Then the events $A_i$ and $A_j$ are independent unless the segements $i$ and $j$ share at least one cell. Define 
+To show this, we can invoke <i>Janson's inequality</i>,[^2] which provides exponential upper bounds on the probability that none of a large collection of weakly dependent “bad” events occur, in terms of their expected count and the sum of their pairwise dependencies. Let $A_i$ be the event that segment $i$ is $FOX$ or $XOF$. Then the events $A_i$ and $A_j$ are independent unless the segements $i$ and $j$ share at least one cell. Define 
 
 $$X := \sum_{i=1}^m \mathbf{1}_{A_i}, \qquad \mu := \E[X] = \sum_{i=1}^m \P(A_i), \qquad \text{and} \qquad \Delta := \sum_{\substack{1 \leq i < j \leq m\\ i \sim j}} \P(A_j \cap A_j),\notag$$ 
 
