@@ -165,7 +165,7 @@ Instead of trying to sample from $\pi$ directly, what if we start off with <i>so
 4. If the resulting grid is still valid (i.e., we didn't create a new $FOX$), then we accept the move and call the new grid $G_{t+1}$
 5. Otherwise, we reject and stay where we are and take $G_{t+1} = G_t$
 
-The resulting chain $\{G_t\}_t$ is obviously time-homogenous. Also, for every $G \in \Omega$, the probability of staying put in one step is at least $1/2$, so $\P(G \to G) \geq 1/2 > 0$, so the chain is aperiodic (Step 1 above is a basic "lazy chain" construction). But is $\pi$ really stationary for this Markov chain? Let $G, G' \in \Omega$ differ in exactly one cell (say the $k$th), and suppose that changing the cell from letter $a$ to letter $b$ keeps the grid valid. The probability of moving from $G$ to $G'$ is 
+The resulting chain $\\{G_t\\}_t$ is obviously time-homogenous. Also, for every $G \in \Omega$, the probability of staying put in one step is at least $1/2$, so $\P(G \to G) \geq 1/2 > 0$, so the chain is aperiodic (Step 1 above is a basic "lazy chain" construction). But is $\pi$ really stationary for this Markov chain? Let $G, G' \in \Omega$ differ in exactly one cell (say the $k$th), and suppose that changing the cell from letter $a$ to letter $b$ keeps the grid valid. The probability of moving from $G$ to $G'$ is 
 
 $$\begin{align*}
 \P(G \to G') &= \P(\mbox{we pick cell $k$}) \cdot \P(\mbox{we propose letter $b$}) \cdot \P(G' \in \Omega)\\
