@@ -161,7 +161,7 @@ There's another way to sample exactly from our target distribution, this time us
 Instead of trying to sample from $\pi$ directly, what if we start off with <i>some</i> valid grid, and then modify it so that it looks like it came from $\pi$? This is where we can exploit MCMC. We will define a symmetric random walk on $\Omega$, where each step makes a tiny local random change but does <i>not</i> violate the constraint. Generating a valid grid (call it $G_0 \in \Omega$) is easy for initialization purposes: for example, the grid consisting entirely of $F$s is perfectly valid. Let's now construct our Markov chain. At the $t$th iteration of our sampler, we'll do the following:
 1. Choose a cell $(i,j)$ in $G_t$ uniformly at random
 2. Propose changing the letter in that cell to one of the other two letters (chosen uniformly)
-3. If the resulting grid is still valid (i.e., we didn't create a new $FOX$), then we accept the move and call the new grid $G_{t+1}$; otherwise, reject the proposed change and set $G_{t+1} = G_t$
+3. If the resulting grid is still valid (i.e., we didn't create a new $FOX$), then accept the move and call the new grid $G_{t+1}$; otherwise, reject the proposed change and set $G_{t+1} = G_t$
 
 The resulting chain $\\{G_t\\}_t$ is obviously time-homogenous. But is $\pi$ really stationary for this Markov chain? Let $G, G' \in \Omega$ differ in exactly one cell (say the $k$th), and suppose that changing the cell from letter $a$ to letter $b$ keeps the grid valid. The probability of moving from $G$ to $G'$ is 
 
@@ -312,7 +312,7 @@ def inject_exactly_one_fox(grid, max_tries=200000):
     raise RuntimeError("Failed to inject exactly one FOX; increase max_tries.")
   ```
 
-Somewhat counterintuitively, most random forced placements of $FOX$ won't actually create extra $FOX$s, because to do so requires a fairly specific local coincidence: the overwritten letters must also complete another length-$3$ pattern passing through one of the modified cells. Since we only alter $3$ cells, the "damage radius" is small, so the probability of collateral $FOX$s is small as well. You can try this with the first page of <i>Find the Fox</i> above: try to pick any length-$3$ segment at random,[^6] change the letters to $FOX$, and see if that change created any extra $FOX$s. Chances are that it didn't!
+Somewhat counterintuitively, most random overwrites of $FOX$ won't actually create extra $FOX$s, because to do so requires a fairly specific local coincidence: the overwritten letters must also complete another length-$3$ pattern passing through one of the modified cells. Since we only alter $3$ cells, the "impact radius" is small, so the probability of collateral $FOX$s is small as well. You can try this with the first page of <i>Find the Fox</i> above: try to pick any length-$3$ segment at random,[^6] change the letters to $FOX$, and see if that change created any extra $FOX$s. Chances are that it didn't!
 
 Finally, we can create a fresh "book" with as many pages as we'd like. For example, you might like the idea of <i>Find the Fox</i> but think that 200 pages is a bit much. We can easily create a single page with exactly one $FOX$ in it! And once we solve that one, we can create another one (and continue ad nauseam until we get bored of finding foxes, which I imagine won't take very long). Here's some code to generate a reasonably pretty PDF:
 
@@ -424,12 +424,12 @@ print("The FOX is on page", result["fox_page_index"] + 1)
 print("FOX info:", result["fox_info"])
 ```
 
-[Here](/files/blog/find_the_fox/FtF_1page.pdf)'s the generated page, and [here](/files/blog/find_the_fox/FtF_1page_answer.pdf)'s the solution key with the $FOX$ coloured in red. Enjoy! If you liked this, please support the author of <i>Find the Fox</i> and purchase the book! Once you've solved it, come back here and generate an iid copy of the book and start again.
+[Here](/files/blog/find_the_fox/FtF_1page.pdf)'s the generated page, and [here](/files/blog/find_the_fox/FtF_1page_answer.pdf)'s the solution key with the $FOX$ coloured in red. Enjoy! If you liked this, please support the author and publisher of <i>Find the Fox</i> and purchase the book! Once you've solved it, come back here and generate an iid copy of the book and start again.
 
 
 
 
-[^1]: Or rather, book<i>s</i>. The [answer page](https://alexcheddar.com/find-the-fox-answers-and-solutions/) for the book asks you to input the serial number, which strongly suggests that different printings of the book have different solutions.
+[^1]: Or rather, book<i>s</i>. The [answer page](https://alexcheddar.com/find-the-fox-answers-and-solutions/) for the book asks you to input the serial number, which suggests that different printings of the book have different solutions.
 [^2]: Not a typo: <i>Jensen's</i> inequality is completely different.
 [^3]: See Theorem 8.1.2 of [these](https://ocw.mit.edu/courses/18-226-probabilistic-methods-in-combinatorics-fall-2022/mit18_226_f22_lec16-17.pdf) course notes by Yufei Zhao, for example.
 [^4]: On the other hand, if you were okay with very narrow or very short grids --- say $5$-ish characters wide or high --- then this would work pretty nicely, since the running time is linear in the dimension you're <i>not</i> scanning over.
