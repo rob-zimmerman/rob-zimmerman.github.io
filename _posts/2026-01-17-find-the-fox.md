@@ -159,13 +159,12 @@ There's another way to sample exactly from our target distribution, this time us
 ## Approximate Sampling
 
 Instead of trying to sample from $\pi$ directly, what if we start off with <i>some</i> valid grid, and then modify it so that it looks like it came from $\pi$? This is where we can exploit MCMC. We will define a symmetric random walk on $\Omega$, where each step makes a tiny local random change but does <i>not</i> violate the constraint. Generating a valid grid (call it $G_0 \in \Omega$) is easy for initialization purposes: for example, the grid consisting entirely of $F$s is perfectly valid. Let's now construct our Markov chain. At the $t$th iteration of our sampler, we'll do the following:
-1. With probability $1/2$, set $G_{t+1} = G_t$ and continue onto iteration $t+1$. Otherwise, proceed:
-2. Choose a cell $(i,j)$ in $G_t$ uniformly at random
-3. Propose changing the letter in that cell to one of the other two letters (chosen uniformly)
-4. If the resulting grid is still valid (i.e., we didn't create a new $FOX$), then we accept the move and call the new grid $G_{t+1}$
-5. Otherwise, we reject and stay where we are and take $G_{t+1} = G_t$
+1. Choose a cell $(i,j)$ in $G_t$ uniformly at random
+2. Propose changing the letter in that cell to one of the other two letters (chosen uniformly)
+3. If the resulting grid is still valid (i.e., we didn't create a new $FOX$), then we accept the move and call the new grid $G_{t+1}$
+4. Otherwise, we reject and stay where we are and take $G_{t+1} = G_t$
 
-The resulting chain $\\{G_t\\}_t$ is obviously time-homogenous. Also, for every $G \in \Omega$, the probability of staying put in one step is at least $1/2$, so $\P(G \to G) \geq 1/2 > 0$, so the chain is aperiodic (the odd-looking first step in the list above is a basic "lazy chain" construction). But is $\pi$ really stationary for this Markov chain? Let $G, G' \in \Omega$ differ in exactly one cell (say the $k$th), and suppose that changing the cell from letter $a$ to letter $b$ keeps the grid valid. The probability of moving from $G$ to $G'$ is 
+The resulting chain $\\{G_t\\}_t$ is obviously time-homogenous. But is $\pi$ really stationary for this Markov chain? Let $G, G' \in \Omega$ differ in exactly one cell (say the $k$th), and suppose that changing the cell from letter $a$ to letter $b$ keeps the grid valid. The probability of moving from $G$ to $G'$ is 
 
 $$\begin{align*}
 \P(G \to G') &= \P(\mbox{we pick cell $k$}) \cdot \P(\mbox{we propose letter $b$}) \cdot \P(G' \in \Omega)\\
@@ -177,9 +176,9 @@ and the probability of the reverse move is exactly the same. Since $\pi(G) = 1/\
 
 $$\pi(G) \cdot \P(G \to G') = \pi(G') \cdot \P(G' \to G).\notag$$ 
 
-So the detailed balance condition is satisfied, and $\pi$ is indeed stationary for our Markov chain.
+So the detailed balance condition is satisfied, and $\pi$ is indeed stationary for our Markov chain. What about aperiodicity? If we form a graph $\mathcal{G}$ whose vertices are grids in $\Omega$ and draw an edge between vertices $G$ and $G'$ if and only if the grids differ in exactly one cell, then we can view our algorithm as a random walk on $\mathcal{G}$. A random walk on an undirected graph is aperiodic if and only if the graph is non-bipartite, and for $\mathcal{G}$ to be non-bipartite, it suffices to find an odd cycle. But that's easy! Start from the all-$F$ grid, then change the first cell to an $O$, then to an $X$, and then to an $F$. All of these grids are clearly in $\mathcal{G}$, so we've exhibited a cycle of length $3$ (i.e., a triangle). 
 
-One tricky issue remains: that of irreducibility. In order to guarantee that the law of $G_t$ will actually converge to $\pi$ as $t \to \infty$, we need to show that our chain is irreducible: any valid grid should be reachable from any other via valid single-cell flips. Equivalently, if we form a graph $\mathcal{G}$ whose vertices are grids in $\Omega$ and draw an edge between vertices $G$ and $G'$ iff the grids differ in exactly one cell, then we need to show that $\mathcal{G}$ is connected. Fortunately, with some care we can prove this. To be general, we'll prove the result for any grid size.
+The only tricky bit is irreducibility. In order to guarantee that the law of $G_t$ will actually converge to $\pi$ as $t \to \infty$, we need to show that our chain is irreducible: any valid grid should be reachable from any other via valid single-cell flips. Equivalently, we need to show that $\mathcal{G}$ is connected. Fortunately, with some care we can prove this. To be general, we'll prove the result for any grid size.
 
 For some setup, fix integers $h,w \geq 1$ and identify grid cells with coordinates $(r,c)$ where $r \in \{1,\ldots,h\}$ and $c \in \{1,\ldots,w\}$. A length-$3$ line segment is any triple of distinct cells of the form 
 
@@ -219,10 +218,6 @@ It remains to actually code up our sampler. We'll go for $1{\small,}100{\small,}
 
 ```python
 def step(grid, lazy_p=0.5):
-    # one step of the lazy single-site chain; grid is a list of lists
-    if random.random() < lazy_p:
-        return
-
     r = random.randrange(height)
     c = random.randrange(width)
     old = grid[r][c]
