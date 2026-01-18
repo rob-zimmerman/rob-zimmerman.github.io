@@ -25,7 +25,7 @@ First of all, we can probably agree that any reasonable method will first sample
 
 ## Exact Sampling
 
-In principle, the simplest way to sample from $\pi$ is by rejection sampling: that is, we keep sampling from $\mathrm{Unif}(\\{F,O,X\\}^{32 \times 20})$ distribution until we produce a grid in $\Omega$. The only challenge here is coding up a valid page checker, which is more of a programming exercise than anything else. Here's a way to do it:
+In principle, the simplest way to sample from $\pi$ is by rejection sampling: that is, we keep sampling from $\mathrm{Unif}(\\{F,O,X\\}^{32 \times 20})$ distribution until we produce a grid in $\Omega$. The only challenge here is coding up a valid grid checker, which is more of a programming exercise than anything else. Here's a way to do it:
 
 ```python
 letters = ("F", "O", "X")
@@ -95,11 +95,11 @@ where $i \sim j$ means that segments $i$ and $j$ overlap and $m$ is the number o
 
 $$C := \{(FOX, FOX), (FOX, XOF), (XOF, FOX), (XOF, XOF)\}.\notag$$
 
-For each combination, we have a set of letter constraints on the union of the cells used by the two segments. Because the letters are independent and uniform, if the constraints are inconsistent (i.e., the same cell is required to be both $F$ and $X$), then $\P(A_i \cap A_j) = 0$; otherwise, the union involves $m \in \\{4,5\\}$ distinct cells and 
+For each combination, we have a set of letter constraints on the union of the cells used by the two segments. Because the letters are independent and uniform, if the constraints are inconsistent (i.e., the same cell is required to be both $F$ and $X$), then $\P(A_i \cap A_j) = 0$; otherwise, the union involves $m_{ij} \in \\{4,5\\}$ distinct cells and 
 
 $$
 \mathbb{P}(A_i \cap A_j)
-= \sum_{c \in C} \mathbf{1}_{\{ \text{combination } c \text{ is consistent for } (i,j) \}}\, \cdot 3^{-m}. \notag
+= \sum_{c \in C} \mathbf{1}_{\{ \text{combination } c \text{ is consistent for } (i,j) \}}\, \cdot 3^{-m_{ij}}. \notag
 $$
 
 We thus compute:
