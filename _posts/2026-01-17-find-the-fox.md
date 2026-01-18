@@ -161,8 +161,7 @@ There's another way to sample exactly from our target distribution, this time us
 Instead of trying to sample from $\pi$ directly, what if we start off with <i>some</i> valid grid, and then modify it so that it looks like it came from $\pi$? This is where we can exploit MCMC. We will define a symmetric random walk on $\Omega$, where each step makes a tiny local random change but does <i>not</i> violate the constraint. Generating a valid grid (call it $G_0 \in \Omega$) is easy for initialization purposes: for example, the grid consisting entirely of $F$s is perfectly valid. Let's now construct our Markov chain. At the $t$th iteration of our sampler, we'll do the following:
 1. Choose a cell $(i,j)$ in $G_t$ uniformly at random
 2. Propose changing the letter in that cell to one of the other two letters (chosen uniformly)
-3. If the resulting grid is still valid (i.e., we didn't create a new $FOX$), then we accept the move and call the new grid $G_{t+1}$
-4. Otherwise, we reject and stay where we are and take $G_{t+1} = G_t$
+3. If the resulting grid is still valid (i.e., we didn't create a new $FOX$), then we accept the move and call the new grid $G_{t+1}$; otherwise, reject the proposed change and set $G_{t+1} = G_t$
 
 The resulting chain $\\{G_t\\}_t$ is obviously time-homogenous. But is $\pi$ really stationary for this Markov chain? Let $G, G' \in \Omega$ differ in exactly one cell (say the $k$th), and suppose that changing the cell from letter $a$ to letter $b$ keeps the grid valid. The probability of moving from $G$ to $G'$ is 
 
