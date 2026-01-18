@@ -91,7 +91,7 @@ To do better, we can invoke <i>Janson's inequality</i>,[^2] which provides expon
 
 $$X := \sum_{i=1}^m \mathbf{1}_{A_i}, \qquad \mu := \E[X] = \sum_{i=1}^m \P(A_i), \qquad \text{and} \qquad \Delta := \sum_{\substack{1 \leq i < j \leq m\\ i \sim j}} \P(A_j \cap A_j),\notag$$ 
 
-where $i \sim j$ means that segments $i$ and $j$ overlap and $m$ is the number of overlapping pairs of segments. The probability that we want is $p_\text{acc} = \P(X = 0)$, which, according to Janson's inequality[^3], is bounded above by $\exp(-\mu + \Delta/2)$. How can we compute $\mu$ and $\Delta$? Observe that $\mu$ is simply the expected number of invalid segments in the random grid, which we computed above as $167.111\ldots$. To compute $\Delta$, note that for each pair $(i,j)$, there are $4$ pattern combinations: 
+where $i \sim j$ means that segments $i$ and $j$ overlap and $m$ is the number of overlapping pairs of segments. The probability that we want is $p_\text{acc} = \P(X = 0)$, which, according to Janson's inequality,[^3] is bounded above by $\exp(-\mu + \Delta/2)$. How can we compute $\mu$ and $\Delta$? Observe that $\mu$ is simply the expected number of invalid segments in the random grid, which we computed above as $167.111\ldots$. To compute $\Delta$, note that for each pair $(i,j)$, there are $4$ pattern combinations: 
 
 $$C := \{(FOX, FOX), (FOX, XOF), (XOF, FOX), (XOF, XOF)\}.\notag$$
 
