@@ -274,11 +274,6 @@ This takes about 10 seconds to run and produces 20 grids. Some quick MCMC diagno
 Now, finally, what about putting in a $FOX$? To do this, we can simply sample one of our grids (uniformly at random) and then change a $3$-letter segment to $FOX$. The harder part is ensuring that this doesn't accidentally create another $FOX$ nearby via overlapping triples. To do this, we'll construct a function that picks a random $3$-letter segment uniformly from the grid, and then overwrites it with either $FOX$ or $XOF$ (with equal probability). Now, observe that if an arbitrary $3$-letter segment in the grid doesn’t touch any changed cell, then its three letters are exactly the same as before, so it couldn’t suddenly become $FOX$ if it wasn’t already. Thus, if there are <i>other</i> $FOX$s after the overwrite, we know that they must be among the length-$3$ segments that intersect the cells that we changed. So we need only enumerate those segments, of which there are a constant number. If, among those segments, we count more than one $FOX$, we undo the overwrite and try again with another random segment. 
 
 ```python
-
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter as LETTER
-from reportlab.lib.colors import black, red
-
 segments = []
   for r in range(height):
       for c in range(width):
@@ -342,6 +337,9 @@ Somewhat counterintuitively, most random forced placements of $FOX$ won't actual
 Finally, we can create a fresh "book" with as many pages as we'd like. For example, you might like the idea of <i>Find the Fox</i> but think that 200 pages is a bit much. We can easily create a single page with exactly one $FOX$ in it! And once we solve that one, we can create another one (and continue ad nauseam until we get bored of finding foxes, which I imagine won't take very long). Here's some code to generate a reasonably pretty PDF:
 
 ```python
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter as LETTER
+from reportlab.lib.colors import black, red
 
 def write_grids_pdf(filename, grids, fox_marks=None, title=None):
     c = canvas.Canvas(filename, pagesize=LETTER)
