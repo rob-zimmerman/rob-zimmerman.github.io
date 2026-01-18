@@ -28,6 +28,8 @@ First of all, we can probably agree that any reasonable method will first sample
 In principle, the simplest way to sample from $\pi$ is by rejection sampling: that is, we keep sampling from $\mathrm{Unif}(\\{F,O,X\\}^{32 \times 20})$ distribution until we produce a grid in $\Omega$. The only challenge here is coding up a valid grid checker, which is more of a programming exercise than anything else. Here's a way to do it:
 
 ```python
+import random
+
 letters = ("F", "O", "X")
 height, width = 32, 20
 
@@ -38,9 +40,9 @@ dirs = [(0,1), (1,0), (1,1), (1,-1),
 def in_bounds(r, c):
     return 0 <= r < height and 0 <= c < width
 
-def violates_local(grid, r, c):
+def violates_local(grid, r, c, directions):
      # check whether FOX appears in any 3-cell segment that includes (r,c), along any direction
-    for dr, dc in dirs:
+    for dr, dc in directions:
         # the triple can be (r-2dr,r-dr,r), (r-dr,r,r+dr), or (r,r+dr,r+2dr)
         for offset in (-2, -1, 0):
             coords = [(r + (offset + k)*dr, c + (offset + k)*dc) for k in range(3)]
@@ -54,7 +56,7 @@ def is_valid(grid):
     # full scan
     for r in range(height):
         for c in range(width):
-            if violates_local(grid, r, c):
+            if violates_local(grid, r, c, dirs):
                 return False
     return True
 ```
@@ -62,8 +64,6 @@ def is_valid(grid):
 The rejection sampler then follows:
 
 ```python
-import random
-
 random.seed(1729)
 
 validgrid = False
@@ -105,7 +105,6 @@ $$
 We thus compute:
 
 ```python
-
 from collections import defaultdict
 from itertools import combinations, product
 
@@ -149,6 +148,7 @@ def pair_prob(s1, s2):
     return total
 
 Delta = sum(pair_prob(segments[i], segments[j]) for i, j in pairs)
+print(Delta)
 ```
 
 This gives $\Delta \approx 171.4567$. Hence $p_\text{acc} \leq e^{-81.3827} \approx 1.2 \times 10^{-36}$. Conclusion: don't use the rejection sampler.
@@ -218,20 +218,6 @@ So our Markov chain is irreducible and aperiodic, and therefore has a unique sta
 It remains to actually code up our sampler. We'll go for $1{\small,}000{\small,}000$ iterations, burn off the first $50{\small,}000$ and thin every $50{\small,}000$th sample. These numbers may seem large compared to what you'd often see in simpler applications (especially in continuous-space settings), but remember that our Markov chain transitions are <i>local</i> moves in an enormous, heavily constrained state space, so mixing is necessarily slow: changing the large-scale features of a grid requires a lot of accepted local moves, so we'll need a lot of iterations before the chain forgets its initialization and reaches more typical configurations. We thin aggressively because successive states of the chain are highly correlated; each iteration proposes a change at a single cell, so even accepted moves alter only one of $32 \times 20 = 640$ cells. As a result, many iterations are required before the chain produces a meaningfully different grid, and large thinning factor gives us approximately independent-looking samples; similarly, a large burn-in period allows us to confidently move past the all-$F$ initialization grid.
 
 ```python
-
-import random
-
-def violates_through(grid, r, c):
-    # check if any forbidden triple occurs in a length-3 segment that includes (r,c)
-    for dr, dc in dirs[:4]:
-        for off in (-2, -1, 0):  # (r+off*dr,c+off*dc) is start of the 3-segment
-            coords = [(r + (off+k)*dr, c + (off+k)*dc) for k in range(3)]
-            if all(in_bounds(rr, cc) for rr, cc in coords):
-                triple = tuple(grid[rr][cc] for rr, cc in coords)
-                if triple in (letters, letters[::-1]):
-                    return True
-    return False
-
 def step(grid, lazy_p=0.5):
     # one step of the lazy single-site chain; grid is a list of lists
     if random.random() < lazy_p:
@@ -243,7 +229,7 @@ def step(grid, lazy_p=0.5):
     new = random.choice([x for x in letters if x != old])
 
     grid[r][c] = new
-    if violates_through(grid, r, c):  # reject if we created a forbidden triple
+    if violates_local(grid, r, c, dirs[:4]):  # reject if we created a forbidden triple
         grid[r][c] = old              # revert
 
 def run_chain(steps=500_000, burn=50_000, thin=50_000, seed=None):
@@ -263,7 +249,7 @@ def run_chain(steps=500_000, burn=50_000, thin=50_000, seed=None):
     return snapshots
 
 
-pages = run_chain(1729)
+pages = run_chain(seed=1729)
 print("\n".join(pages[0][:10]))
 ```
 
@@ -275,12 +261,13 @@ Now, finally, what about putting in a $FOX$? To do this, we can simply sample on
 
 ```python
 segments = []
-  for r in range(height):
-      for c in range(width):
-          for dr, dc in dirs[:4]:  # →, ↓, ↘, ↙
-              coords = [(r + k*dr, c + k*dc) for k in range(3)]
-              if all(in_bounds(rr, cc) for rr, cc in coords):
-                  segments.append((tuple(coords), (dr, dc)))
+
+for r in range(height):
+    for c in range(width):
+        for dr, dc in dirs[:4]:  # →, ↓, ↘, ↙
+            coords = [(r + k*dr, c + k*dc) for k in range(3)]
+            if all(in_bounds(rr, cc) for rr, cc in coords):
+                segments.append((tuple(coords), (dr, dc)))
 
 def segments_through_cell(r, c):
     # all length-3 segments (4 directions) that include (r,c)
@@ -307,11 +294,8 @@ def count_fox_in_affected(grid, affected_cells):
     return total
 
 def inject_exactly_one_fox(grid, max_tries=200000):
-    # sanity check: input must be FOX-free
-    assert is_valid(grid), "Input grid must be valid."
-
     for _ in range(max_tries):
-        (cells, (dr, dc)) = random.choice(SEGMENTS)
+        (cells, (dr, dc)) = random.choice(segments)
         pat = random.choice((letters, letters[::-1]))  # choose FOX or XOF orientation on this segment
 
         new = [row[:] for row in grid]
@@ -325,7 +309,7 @@ def inject_exactly_one_fox(grid, max_tries=200000):
         if not changed:
             continue
 
-        # ctarting grid has 0; any new occurrence must touch a changed cell
+        # starting grid has 0; any new occurrence must touch a changed cell
         if count_fox_in_affected(new, changed) == 1:
             return new, {"cells": cells, "dir": (dr, dc), "pattern": pat}
 
@@ -341,46 +325,71 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter as LETTER
 from reportlab.lib.colors import black, red
 
-def write_grids_pdf(filename, grids, fox_marks=None, title=None):
+def write_grids_pdf(filename, grids, fox_marks=None):
     c = canvas.Canvas(filename, pagesize=LETTER)
-    page_w, page_h = letters
+    page_w, page_h = LETTER
 
-    # monospaced font so alignment is easy
-    font_name = "Courier"
-    font_size = 12
-    line_h = font_size * 1.2
-    left = 72
-    top = page_h - 72
+    # page layout stuff
+    margin_x = 72
+    margin_top = 60
+    margin_bot = 60
+
+    # grid area bounds (leaves room for title and page number)
+    grid_top = page_h - margin_top - 40
+    grid_bot = margin_bot + 30
+    avail_h = grid_top - grid_bot
+    avail_w = page_w - 2 * margin_x
+
+    # monospaced font for the grid
+    font_name = "Times-Roman"
 
     for i, rows in enumerate(grids):
-        c.setFont(font_name, font_size)
-
-        if title:
-            c.setFillColor(black)
-            c.drawString(left, top + line_h, f"{title} — page {i+1}/{len(grids)}")
-
-        # Build a fast lookup for highlighted cells on this page
+        # build lookup for highlighted cells on this page
         red_cells = set()
         if fox_marks is not None and fox_marks[i] is not None:
             red_cells = set(fox_marks[i].get("cells", []))
 
-        # draw row by row, char by char (lets us color individual letters)
-        y = top
-        char_w = c.stringWidth("M", font_name, font_size)  # monospaced width
+        n_rows = len(rows)
+        n_cols = len(rows[0]) if n_rows else 0
+        fs_h = avail_h / (n_rows * 1.35)
+        fs_w = avail_w / (n_cols * 1.30)
+        font_size = min(fs_h, fs_w) * 1.15
+        font_size = max(8, min(18, font_size))
+
+        c.setFont(font_name, font_size)
+        char_w = c.stringWidth("M", font_name, font_size)
+
+        tracking = char_w * 0.70     # extra spacing between letters
+        pitch = char_w + tracking
+        line_h = font_size * 1.25
+
+        grid_w = pitch * (n_cols - 1) + char_w
+        grid_h = line_h * (n_rows - 1) + font_size
+
+        start_x = (page_w - grid_w) / 2
+        start_y = grid_bot + (avail_h + grid_h) / 2  # near top of grid area
+
+        # draw grid
+        y = start_y
         for r, row in enumerate(rows):
-            x = left
+            x = start_x
             for cc, ch in enumerate(row):
                 c.setFillColor(red if (r, cc) in red_cells else black)
                 c.drawString(x, y, ch)
-                x += char_w
+                x += pitch
             y -= line_h
+
+        # page number (bottom center)
+        c.setFillColor(black)
+        c.setFont("Times-Roman", 10)
+        c.drawCentredString(page_w / 2, margin_bot / 2, str(i + 1))
 
         c.showPage()
 
     c.save()
 
 
-def make_book(n_pages,
+def make_book(n_pages=1,
               steps=1_100_000,
               burn=50_000,
               thin=50_000,
@@ -389,39 +398,36 @@ def make_book(n_pages,
               out_key_pdf="find_the_fox_answer_key.pdf"):
     random.seed(seed)
 
-    # collect n_pages valid pages from MCMC snapshots; each snapshot is list[str] rows
     pages = run_chain(steps=steps, burn=burn, thin=thin, seed=seed)
-
     if len(pages) < n_pages:
         raise ValueError(f"run_chain produced only {len(pages)} snapshots; need {n_pages}. "
-                         "Increase steps or reduce thin.")
+                         "Increase number of steps or reduce thinning factor.")
 
     pages = pages[:n_pages]
 
     # choose which page gets the FOX
     j = random.randrange(n_pages)
 
-    # convert that page to list[list[str]] for editing
+    # inject exactly one FOX/XOF on that page
     grid = [list(row) for row in pages[j]]
     new_grid, info = inject_exactly_one_fox(grid)
 
-    # put it back as list[str]
     pages_with_fox = list(pages)
     pages_with_fox[j] = ["".join(row) for row in new_grid]
 
     # book PDF: no highlighting
-    write_grids_pdf(out_pdf, pages_with_fox, fox_marks=[None]*k, title="Find the Fox")
+    write_grids_pdf(out_pdf, pages_with_fox, fox_marks=[None]*n_pages)
 
-    # answer key PDF: highlight the FOX letters on the one page
-    marks = [None]*k
+    # answer key PDF
+    marks = [None]*n_pages
     marks[j] = info
-    write_grids_pdf(out_key_pdf, pages_with_fox, fox_marks=marks, title="Find the Fox — Answer Key")
+    write_grids_pdf(out_key_pdf, pages_with_fox, fox_marks=marks)
 
     return {"fox_page_index": j, "fox_info": info}
 
 
 result = make_book(n_pages=1)
-print("FOX inserted on page:", result["fox_page_index"] + 1)
+print("The FOX is on page", result["fox_page_index"] + 1)
 print("FOX info:", result["fox_info"])
 ```
 
