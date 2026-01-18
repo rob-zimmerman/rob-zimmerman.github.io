@@ -334,14 +334,11 @@ def write_grids_pdf(filename, grids, fox_marks=None):
     margin_top = 60
     margin_bot = 60
 
-    # grid area bounds (leaves room for title and page number)
+    # grid area bounds
     grid_top = page_h - margin_top - 40
     grid_bot = margin_bot + 30
     avail_h = grid_top - grid_bot
     avail_w = page_w - 2 * margin_x
-
-    # monospaced font for the grid
-    font_name = "Times-Roman"
 
     for i, rows in enumerate(grids):
         # build lookup for highlighted cells on this page
@@ -356,10 +353,10 @@ def write_grids_pdf(filename, grids, fox_marks=None):
         font_size = min(fs_h, fs_w) * 1.15
         font_size = max(8, min(18, font_size))
 
-        c.setFont(font_name, font_size)
-        char_w = c.stringWidth("M", font_name, font_size)
+        c.setFont("Times-Roman", font_size)
+        char_w = c.stringWidth("M", "Times-Roman", font_size)
 
-        tracking = char_w * 0.70     # extra spacing between letters
+        tracking = char_w * 0.70     # spacing between letters
         pitch = char_w + tracking
         line_h = font_size * 1.25
 
@@ -405,7 +402,7 @@ def make_book(n_pages=1,
 
     pages = pages[:n_pages]
 
-    # choose which page gets the FOX
+    # choose which page gets the FOX/XOF
     j = random.randrange(n_pages)
 
     # inject exactly one FOX/XOF on that page
