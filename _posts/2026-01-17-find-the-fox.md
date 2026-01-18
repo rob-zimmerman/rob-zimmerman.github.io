@@ -215,7 +215,7 @@ Now, take any two grids $G, G' \in \Omega$. By the previous construction, there 
 
 So our Markov chain is irreducible and aperiodic, and therefore has a unique stationary distribution. Since $\pi$ is stationary (as we verified from the detailed balance condition), it is the unique stationary distribution, and for any starting state $G_0 \in \Omega$, we have $\mathcal{L}(G_t) \to \pi$ as $t \to \infty$ by the standard finite-state Markov chain convergence theorem.
 
-It remains to actually code up our sampler. We'll go for $1{\small,}000{\small,}000$ iterations, burn off the first $50{\small,}000$ and thin every $50{\small,}000$th sample.
+It remains to actually code up our sampler. We'll go for $1{\small,}000{\small,}000$ iterations, burn off the first $50{\small,}000$ and thin every $50{\small,}000$th sample. These numbers may seem large compared to what you'd often see in simpler applications (especially in continuous-space applications), but remember that our Markov chain transitions are <i>local</i> moves in an enormous, heavily constrained state space, so mixing is necessarily slow: changing the large-scale features of a grid necessarily requires lots of accepted local moves.
 
 ```python
 
@@ -267,7 +267,7 @@ pages = run_chain(1729)
 print("\n".join(pages[0][:10]))
 ```
 
-This takes about 10 seconds to run and produces 20 grids. Some quick MCMC diagnostics: our acceptance rate is a healthy $0.452$, and the frequencies of the letters $F$, $O$, and $X$ at the last sampled grid are $0.323$, $0.328$, and $0.348$ respectively, which is about what we'd expect. Of course $\pi \neq (1/3, 1/3, 1/3)$, but the difference should be quite negligible. An acf plot suggests that the autocorrelation of the resulting samples decays reasonably fast:
+This takes about 10 seconds to run and produces 20 grids. Some quick MCMC diagnostics: our acceptance rate is a healthy $0.452$, and the frequencies of the letters $F$, $O$, and $X$ at the last sampled grid are $0.323$, $0.328$, and $0.348$ respectively, which is about what we'd expect. More precisely, each of those is the observed value of the pushforward of $\pi$ under the coordinate projection onto a single cell, taking values in $\\{F,O,X\\}$. The unconditional distribution $\text{Unif}(\\{F,O,X\\}^{32 \times 20})$ is invariant under any permutation of the letters, and the conditioning event "no FOX appears" that defines $\pi$ is also invariant under relabelling the letters. Thus $\pi$ is exchangeable in the letters, and it follows by symmetry that $\pi$ assigns mass $1/3$ to each letter (so the "local" letter frequencies remain uniform despite rather strong global conditioning). An acf plot suggests that the autocorrelation of the resulting samples decays reasonably fast:
 
 ![Autocorrelation function](/files/blog/find_the_fox/FtF_acf.jpg)
 
