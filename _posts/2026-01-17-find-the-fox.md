@@ -21,7 +21,7 @@ Since it was published in 2024, Alex Cheddar's book [<i>Find the Fox: the Almost
 
 Upon a quick inspection, the letters seem to be fairly uniformly distributed -- conditional, of course, on the string FOX not appearing (it's definitely not on this page). This led me to think about how the book would have been generated (I certainly hope that Mr. Cheddar didn't write the book[^1] manually, letter by letter!). Each of the 200 pages consists of a $32 \times 20$ grid. Assuming the letters really are randomly generated, the book can be said to have been sampled from the $\mathrm{Unif}(\\{F,O,X\\}^{32 \times 20 \times 200})$ distribution conditional on the string $FOX$ only appearing once. Sampling from this conditional distribution is not trivial. In this post, we'll develop a method to do so using Python.
 
-First of all, we can probably agree that any reasonable method will first sample from the distribution in which the string doesn't appear anywhere, and then randomly choose a spot to insert it. That last part is fairly straightforward: we find either the string $FFX$ or $FXX$ at random, change the middle character to an $O$, and ensure that the change has only created a single instance of $FOX$. So for now, let's focus on generating a single $FOX$-less grid. Call a grid <i>valid</i> if it doesn't contain the string $FOX$ anywhere, and let $\Omega$ be the set of valid $32 \times 20$ grids. We want to sample from the $\text{Unif}(\Omega)$ distribution, which we'll call $\pi$ (as is tradition).
+First of all, we can probably agree that any reasonable method will first sample from the distribution in which the string doesn't appear anywhere, and then randomly choose a spot to insert it. The essential strategy behind the last part is fairly straightforward: we simply change overwrite some $3$-letter sting to $FOX$, and then ensure that this replacement has added <i>only one</i> $FOX$. So for now, let's focus on generating a single $FOX$-less grid. Call a grid <i>valid</i> if it doesn't contain the string $FOX$ anywhere, and let $\Omega$ be the set of valid $32 \times 20$ grids. We want to sample from the $\text{Unif}(\Omega)$ distribution, which we'll call $\pi$ (as is tradition).
 
 ## Exact Sampling
 
@@ -77,7 +77,7 @@ print(newgrid)
 
 Because the proposal distribution is uniform over all $3^{32 \cdot 20}$ grids, the accepted sample is exactly uniform over the valid ones. So in theory, this works! You can try running this if you want, but I wouldn't recommend it. Why? The problem is the acceptance rate $p_\text{acc}$. Computing the exact acceptance rate is essentially an inclusion-exclusion/transfer-matrix counting problem which explodes combinatorially in $2$ dimensions, but we can compute a rigorous upper bound. 
 
-Let $N$ be the number of length-3 segments we're checking. Checking for a valid grid is equivalent to checking the four "forward" directions (→, ↓, ↘, ↙) --- of which there are 
+Let $N$ be the number of length-$3$ segments we're checking. Checking for a valid grid is equivalent to checking the four "forward" directions (→, ↓, ↘, ↙) --- of which there are 
 
 $$N = 20(32 - 2) + (20-2)32 + 2(32-2)(20-2) = 2256 \notag$$
 
@@ -85,7 +85,7 @@ segments --- for the presence of the strings $FOX$ and $XOF$. For each segment, 
 
 $$p_\text{acc} \leq \left(1 - \frac{2}{127}\right)^{192} \approx 3.83 \times 10^{-7}.\notag$$ 
 
-So the acceptance rate is at most about one in 2.6 million, which doesn't seem horrible if we're willing to wait for a few days. In fact, this bound is misleadingly optimistic!
+So the acceptance rate is at most about one in 2.6 million, which doesn't seem horrible if we're running our code on a peppy, multithreaded processor and we're willing to wait for a few days. In fact, this bound is misleadingly optimistic --- in fact, it overstates the probability by a factor of over <i>300 octillion</i>.
 
 To do better, we can invoke <i>Janson's inequality</i>,[^2] which provides exponential upper bounds on the probability that none of a large collection of weakly dependent “bad” events occur, in terms of their expected count and the sum of their pairwise dependencies. Let $A_i$ be the event that segment $i$ is $FOX$ or $XOF$. Then the events $A_i$ and $A_j$ are independent unless the segements $i$ and $j$ share at least one cell. Define 
 
@@ -271,7 +271,7 @@ This takes about 10 seconds to run and produces 20 grids. Some quick MCMC diagno
 
 ![Autocorrelation function](/files/blog/find_the_fox/FtF_acf.jpg)
 
-Now, finally, what about putting in a $FOX$? To do this, we can sample one of our grids (uniformly at random) and then recheck the $O(1)$ length-$3$ segments that intersect the cells changed from $G^{(0)}$ (i.e., the initialized all-$F$ grid):
+Now, finally, what about putting in a $FOX$? To do this, we can simply sample one of our grids (uniformly at random) and then change a $3$-letter segment to $FOX$. The harder part is ensuring that this doesn't accidentally create another $FOX$ nearby via overlapping triples. To do this, we'll construct a function that picks a random $3$-letter segment uniformly from the grid, and then overwrites it with either $FOX$ or $XOF$ (with equal probability). Now, observe that if an arbitrary $3$-letter segment in the grid doesn’t touch any changed cell, then its three letters are exactly the same as before, so it couldn’t suddenly become $FOX$ if it wasn’t already. Thus, if there are <i>other</i> $FOX$s after the overwrite, we know that they must be among the length-$3$ segments that intersect the cells that we changed. So we need only enumerate those segments, of which there are a constant number. If, among those segments, we count more than one $FOX$, we undo the overwrite and try again with another random segment. 
 
 ```python
 
@@ -337,7 +337,9 @@ def inject_exactly_one_fox(grid, max_tries=200000):
     raise RuntimeError("Failed to inject exactly one FOX; increase max_tries.")
   ```
 
-Finally, we can create a fresh book with as many pages as we'd like. For example, you might like the idea of <i>Find the Fox</i> but think that 200 pages is a bit much. We can easily create a single page with exactly one $FOX$ in it! And once we solve that one, we can create another one (and continue ad nauseam until we get bored of finding foxes, which I imagine won't take very long). Here's some code to generate a reasonably pretty PDF:
+Somewhat counterintuitively, most random forced placements of $FOX$ won't actually create extra $FOX$s, because to do so requires a fairly specific local coincidence: the overwritten letters must also complete another length-$3$ pattern passing through one of the modified cells. Since we only alter $3$ cells, the "damage radius" is small, so the probability of collateral $FOX$s is small as well. You can try this with the first page of <i>Find the Fox</i> above: try to pick any length-$3$ segment at random[^5], change the letters to $FOX$, and see if that change has created any extra $FOX$s. Chances are that it didn't!
+
+Finally, we can create a fresh "book" with as many pages as we'd like. For example, you might like the idea of <i>Find the Fox</i> but think that 200 pages is a bit much. We can easily create a single page with exactly one $FOX$ in it! And once we solve that one, we can create another one (and continue ad nauseam until we get bored of finding foxes, which I imagine won't take very long). Here's some code to generate a reasonably pretty PDF:
 
 ```python
 
@@ -434,3 +436,4 @@ print("FOX info:", result["fox_info"])
 [^2]: Not a typo: <i>Jensen's</i> inequality is completely different.
 [^3]: See Theorem 8.1.2 of [these](https://ocw.mit.edu/courses/18-226-probabilistic-methods-in-combinatorics-fall-2022/mit18_226_f22_lec16-17.pdf) course notes by Yufei Zhao, for example.
 [^4]: On the other hand, if you were okay with very narrow or very short grids --- say $5$-ish characters wide or high --- then this would work pretty nicely, since the running time is linear in the dimension you're <i>not</i> scanning over.
+[^5]: This is important: if you specifically look for a length-$3$ segment that has two of the three $FOX$ letters in the correct positions (e.g., $FFX$, $XOX$, etc.) and it's not on the boundary of the grid, then you can guarantee at least two $FOX$s with a carefully chosen overwrite. 
