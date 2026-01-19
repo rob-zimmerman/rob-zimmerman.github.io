@@ -79,13 +79,13 @@ Because the proposal distribution is uniform over all $3^{32 \cdot 20}$ grids, t
 
 Let $N$ be the number of length-$3$ segments we're checking. Checking for a valid grid is equivalent to checking the four "forward" directions (→, ↓, ↘, ↙) --- of which there are 
 
-$$N = 20(32 - 2) + (20-2)32 + 2(32-2)(20-2) = 2256 \notag$$
+$$20(32 - 2) + (20-2)32 + 2(32-2)(20-2) = 2256 \notag$$
 
 segments --- for the presence of the strings $FOX$ and $XOF$. For each segment, we're forbidding $2$ out of $3^3$ patterns, so the probability that a single segment is invalid is $2/27$. The expected number of invalid segments in a random grid is then $2256 \cdot (2/27) = 167.111\ldots$. For a quick upper bound on the acceptance probability, we can consider only disjoint segments. In each row of length $20$ we can choose $6$ disjoint horizontal triples (covering $18$ cells), which across $32$ rows comes to $192$ independent triples. If the grid is valid, then none of these triples can be $FOX$ and $XOF$, and hence 
 
 $$p_\text{acc} \leq \left(1 - \frac{2}{127}\right)^{192} \approx 3.83 \times 10^{-7}.\notag$$ 
 
-So the acceptance rate is at most about one in 2.6 million, which doesn't seem horrible if we're running our code on a peppy, multithreaded processor and we're willing to wait for a few days. In fact, this bound is misleadingly optimistic --- in fact, it overstates the probability by a factor of over 300 octillion.
+So the acceptance rate is at most about one in 2.6 million, which doesn't seem horrible if we're running our code on a peppy, multithreaded processor and we're willing to wait for a few days. In fact, this bound is misleadingly optimistic --- it overstates the probability by a factor of over 300 octillion.
 
 To show this, we can invoke <i>Janson's inequality</i>,[^2] which provides exponential upper bounds on the probability that none of a large collection of weakly dependent “bad” events occur, in terms of their expected count and the sum of their pairwise dependencies. Let $A_i$ be the event that segment $i$ is $FOX$ or $XOF$. Then the events $A_i$ and $A_j$ are independent unless the segements $i$ and $j$ share at least one cell. Define 
 
