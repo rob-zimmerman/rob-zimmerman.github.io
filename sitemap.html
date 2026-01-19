@@ -7,7 +7,9 @@ permalink: /sitemap.xml
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
+      {% if post.date %}
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% endif %}
     </url>
   {% endfor %}
   {% for page in site.pages %}
