@@ -181,7 +181,7 @@ What about aperiodicity? If we form a graph $\mathcal{G}$ whose vertices are gri
 
 The only tricky bit is irreducibility. In order to guarantee that the law of $G_t$ will actually converge to $\pi$ as $t \to \infty$, we need to show that our chain is irreducible: any valid grid should be reachable from any other via valid single-cell flips. Equivalently, we need to show that $\mathcal{G}$ is connected. Fortunately, with some care we can prove this. To be general, we'll prove the result for any grid size.
 
-For some setup, fix integers $h,w \geq 1$ and identify grid cells with coordinates $(r,c)$ where $r \in \{1,\ldots,h\}$ and $c \in \{1,\ldots,w\}$. A length-$3$ line segment is any triple of distinct cells of the form 
+For some setup, fix integers $h,w \geq 1$ and identify grid cells with coordinates $(r,c)$ where $r \in \\{1,\ldots,h\\}$ and $c \in \\{1,\ldots,w\\}$. A length-$3$ line segment is any triple of distinct cells of the form 
 
 $$(r,c), (r + \delta_r, c + \delta_c), (r + 2\delta_r, c + 2 \delta_c)\notag$$
 
