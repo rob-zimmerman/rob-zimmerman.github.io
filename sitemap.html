@@ -3,13 +3,11 @@ layout: none
 permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% raw %}<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% endraw %}
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.date %}
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {% endif %}
+      {% if post.date %}<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>{% endif %}
     </url>
   {% endfor %}
   {% for page in site.pages %}
