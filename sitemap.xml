@@ -5,37 +5,42 @@ permalink: /sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% for page in site.pages %}
-    {% unless page.sitemap == false or page.url contains 'feed.xml' %}
-  <url>
-    <loc>{{ site.url }}{{ page.url | replace:'index.html','' }}</loc>
-    {% if page.last_modified_at %}
-    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% endif %}
-  </url>
-    {% endunless %}
-  {% endfor %}
+  {%- assign base = site.url | append: site.baseurl -%}
 
-  {% for post in site.posts %}
+  {%- comment -%} Pages {%- endcomment -%}
+  {%- for page in site.pages -%}
+    {%- if page.url and page.sitemap != false and page.url != "/sitemap.xml" and page.url != "/feed.xml" -%}
   <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
+    <loc>{{ base }}{{ page.url | replace:'index.html','' }}</loc>
+    {%- if page.last_modified_at -%}
+    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- endif -%}
+  </url>
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment -%} Posts {%- endcomment -%}
+  {%- for post in site.posts -%}
+  <url>
+    <loc>{{ base }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
-  {% endfor %}
+  {%- endfor -%}
 
-  {% for collection in site.collections %}
-    {% if collection.output %}
-      {% for doc in collection.docs %}
-        {% unless doc.sitemap == false %}
+  {%- comment -%} Collections (publications/talks/teaching, etc.) {%- endcomment -%}
+  {%- for collection in site.collections -%}
+    {%- if collection.output -%}
+      {%- for doc in collection.docs -%}
+        {%- if doc.url and doc.sitemap != false -%}
   <url>
-    <loc>{{ site.url }}{{ doc.url }}</loc>
-    {% if doc.last_modified_at %}
+    <loc>{{ base }}{{ doc.url }}</loc>
+    {%- if doc.last_modified_at -%}
     <lastmod>{{ doc.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% endif %}
+    {%- endif -%}
   </url>
-        {% endunless %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
 
 </urlset>
