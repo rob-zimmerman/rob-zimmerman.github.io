@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://rob-zimmerman.github.io/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publications/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/talks/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/teaching/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/blog/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/cv/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publication/2025-09-30-tractable-family-of-smooth-copulas</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publication/2024-05-13-separating-states-in-astronomical-sources</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publication/copula-modeling-serially-correlated</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publication/2022-04-12-new-family-smooth-copulas</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publications/2022-12-15-copulas-IG</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/projects/STA4531_Copulas_IG_Strange_Bedfellows.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publications/2022-04-16-edgeworth-saddlepoint</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/projects/STA4508H_Edgeworth_Saddlepoint.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publications/2021-05-09-sampling-nested-ACs</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/projects/STA4528_Report_on_Nested_ACs.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publications/2021-04-23-determinantal-processes</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/projects/MATH1128_Simulations_of_Determinantal_Processes.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publications/2019-11-25-estimate-1</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/projects/STA4519_Overview_of_Transport_Map_MCMC.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/projects/STA3431_How_to_Estimate_1.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/publications/2018-11-31-c-statistic</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/projects/STA2010_An_Introduction_to_c_Statistic.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/presentations/CUMC-July2016.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/teaching/STA2311</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/teaching/STA261</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/teaching/STA201</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/posts/2026-find-the-fox</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/posts/2024-non-integer-moments</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/posts/2023-self-normalized-rvs</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/posts/2022-self-independence-ancillarity</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/categories/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/sta2311_fall_2023_syllabus.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-1---Validation.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-2---Classical-Optimization-Methods.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class_2_Practice_Problems.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-3---EM-Algorithm.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class_3_Practice_Problems.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-4---Stochastic-Optimization.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class_4_Practice_Problems.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-5---Variational-Inference.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class_5_Practice_Problems.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-6---Simulation-and-Monte-Carlo.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class_6_Practice_Problems.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-7---MCMC-Basics.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class_7_Practice_Problems.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class-8---MCMC-Tuning-and-Diagnostics.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/Class_8_Practice_Problems.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/sta2311_fall_2023_homework1.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/sta2311_fall_2023_homework2.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/sta2311_fall_2023_midterm.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA2311/sta2311_fall_2023_final.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/summer_2021_syllabus.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/summer_2022_syllabus.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/summer_2024_syllabus.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_1___statistics.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_1___statistics__annotated_.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_0.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_0_solutions.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_1.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_2___point_estimation.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_2___point_estimation__annotated_.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_2.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_3___hypothesis_testing.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_3___hypothesis_testing__annotated_.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_3.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_4___intervals_and_model_checking.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_4___intervals_and_model_checking__annotated_.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_4.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_5___asymptotic_extensions.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_5___asymptotic_extensions__annotated_.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_5.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_6___bayesian_statistics.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_slides/module_6___bayesian_statistics__annotated_.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/assignment_6.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2021_quiz_1.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2021_quiz_2.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2021_quiz_3.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2021_quiz_4.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2021_quiz_5.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2021_final_assessment.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2022_midterm_1.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2022_midterm_2.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2022_final_examination.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_midterm_1.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_midterm_2.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA261/2024_final_examination.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA201/Week_4_Annotated.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA201/Week_8_Annotated.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA201/Week_11_Annotated.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/teaching/STA201/Week_13_Annotated.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/blog/find_the_fox/FtF_1page.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/files/blog/find_the_fox/FtF_1page_answer.pdf</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://rob-zimmerman.github.io/tags/</loc>
+  <lastmod>2026-01-21T04:29:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
