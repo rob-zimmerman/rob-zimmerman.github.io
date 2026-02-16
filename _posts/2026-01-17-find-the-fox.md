@@ -314,9 +314,11 @@ def inject_exactly_one_fox(grid, max_tries=200000):
 
 Somewhat counterintuitively, most random overwrites of $FOX$ won't actually create extra $FOX$s, because to do so requires a fairly specific local coincidence: the overwritten letters must also complete another length-$3$ pattern passing through one of the modified cells. Since we only alter $3$ cells, the "impact radius" is small, so the probability of collateral $FOX$s is small as well. You can try this with the first page of <i>Find the Fox</i> above: try to pick any length-$3$ segment at random,[^6] change the letters to $FOX$, and see if that change created any extra $FOX$s. Chances are that it didn't!
 
-Finally, we can create a fresh "book" with as many pages as we'd like. For example, you might like the idea of <i>Find the Fox</i> but think that 200 pages is a bit much. We can easily create a single page with exactly one $FOX$ in it! And once we solve that one, we can create another one (and continue ad nauseam until we get bored of finding foxes, which I imagine won't take very long). Here's some code to generate a reasonably pretty PDF:
+Finally, we can create a fresh "book" with as many pages as we'd like. For example, you might like the idea of <i>Find the Fox</i> but think that 200 pages is a bit much. We can easily create a single page with exactly one $FOX$ in it! And once we solve that one, we can create another one (and continue ad nauseam until we get bored of finding foxes, which I imagine won't take very long). The code for generating the PDF isn't very interesting so I'll omit it here, but a command-line interface is available at (https://github.com/rob-zimmerman/find-the-fox-mcmc) with a number of useful options you can specify (custom alphabet, grid height and width, number of pages, MCMC controls, etc.) [Here](/files/blog/find_the_fox/FtF_1page.pdf)'s the generated page, and [here](/files/blog/find_the_fox/FtF_1page_answer.pdf)'s the solution key with the $FOX$ coloured in red. Enjoy! If you liked this, please support the author and publisher of <i>Find the Fox</i> and purchase the book! Once you've solved it, come back here and generate an iid copy of the book and start again.
 
-```python
+<!-- Here's some code to generate a reasonably pretty PDF: -->
+
+<!-- ```python
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter as LETTER
 from reportlab.lib.colors import black, red
@@ -422,9 +424,7 @@ def make_book(n_pages=1,
 result = make_book(n_pages=1)
 print("The FOX is on page", result["fox_page_index"] + 1)
 print("FOX info:", result["fox_info"])
-```
-
-[Here](/files/blog/find_the_fox/FtF_1page.pdf)'s the generated page, and [here](/files/blog/find_the_fox/FtF_1page_answer.pdf)'s the solution key with the $FOX$ coloured in red. Enjoy! If you liked this, please support the author and publisher of <i>Find the Fox</i> and purchase the book! Once you've solved it, come back here and generate an iid copy of the book and start again.
+``` -->
 
 
 
