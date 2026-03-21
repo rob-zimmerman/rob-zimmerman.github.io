@@ -1,9 +1,4 @@
----
-layout: null
-permalink: /robots.txt
-compress_html: false
----
 User-agent: *
 Allow: /
 
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://rob-zimmerman.ca/sitemap.xml
