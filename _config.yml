@@ -89,12 +89,12 @@ analytics:
 author:
   name             : "Robert Zimmerman"
   avatar           : "RZ.jpg"
-  bio              : "Research Associate at Imperial College London"
-  location         : "London, UK"
+  bio              : 
+  location         : "Toronto, CA"
   employer         :
   pubmed           :
   googlescholar    :
-  email            : "r.zimmerman23@imperial.ac.uk"
+  email            : "robert.zimmerman@alumni.utoronto.ca"
   researchgate     :
   uri              :
   bitbucket        :
