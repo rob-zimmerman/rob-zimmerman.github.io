@@ -3,8 +3,7 @@ title: "Primitive Sequences for Probability Measures"
 collection: publications
 category: articles
 permalink: /publication/2026-05-10-primitive-sequences-for-probability-measures
-excerpt:  
-
+excerpt:'
 We introduce a sequence representation of a random variable supported on a compact interval, which we call a primitive sequence. We show that the primitive sequence can be identified as a rescaled moment sequence of the reflected random variable, and connect primitive sequences to classical moment theory, thereby characterizing admissible primitive sequences. We also examine the set of probability measures with fixed primitive sequence terms and obtain bounds on functionals of those measures.'
 date: 2026-05-10
 paperurl: 'https://arxiv.org/abs/2605.07920'
