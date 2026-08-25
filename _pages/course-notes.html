@@ -1,0 +1,27 @@
+---
+layout: archive
+title: "Course Notes"
+permalink: /coursenotes/
+author_profile: true
+---
+
+<p>
+  These are personal lecture notes, not official course materials. They may
+  contain errors, which should be attributed to me rather than to the course
+  instructors.
+</p>
+
+{% assign institutions = site.data.course_notes | group_by: "institution" %}
+{% for institution in institutions %}
+  <h2>{{ institution.name }}</h2>
+  <ul>
+    {% for note in institution.items %}
+      <li>
+        <a href="{{ note.url | relative_url }}">
+          <strong>{{ note.course_code }}</strong>: {{ note.title }}
+        </a>
+        {% if note.term %}<span> ({{ note.term }})</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

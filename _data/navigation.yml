@@ -7,8 +7,11 @@ main:
     url: /talks/    
 
   - title: "Teaching"
-    url: /teaching/    
-        
+    url: /teaching/
+
+  - title: "Course Notes"
+    url: /coursenotes/
+
   - title: "Musings"
     url: /blog/
     
