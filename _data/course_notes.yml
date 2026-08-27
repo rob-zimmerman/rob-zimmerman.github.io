@@ -116,6 +116,15 @@
   url: "/files/course-notes/uw-actsc231-rz-notes.pdf"
   sha256: "99e98afd3bc53d416219c9a65860786e9cf254daaa0c7c8f35ade1fd7ef55d32"
   bytes: 812872
+- id: "uw-actsc371"
+  institution: "University of Waterloo"
+  course_code: "ACTSC 371"
+  title: "Corporate Finance I"
+  instructor: "Prof. Brent Matheson"
+  term: "Winter 2014"
+  url: "/files/course-notes/uw-actsc371-rz-notes.pdf"
+  sha256: "74484074a68c2a74abf0e9868c6f7ef0e31eeb90022e4b1382be7de9049dfeb6"
+  bytes: 739503
 - id: "uw-actsc372"
   institution: "University of Waterloo"
   course_code: "ACTSC 372"
