@@ -6,8 +6,8 @@
   instructor: "Prof. Bálint Virág"
   term: "Winter 2021"
   url: "/files/course-notes/uoft-mat1128h-notes.pdf"
-  sha256: "dbe61ef705080a8c1e192b3c7c65984afe3f3b9e768d08862c7ed362c485c5b9"
-  bytes: 1284561
+  sha256: "4809e8a6145af61450d15b39230edbfbd36e960baa138a3eb3e49a5bc354d880"
+  bytes: 1301783
 - id: "uoft-mat1601h"
   institution: "University of Toronto"
   course_code: "MAT 1601H"
@@ -15,8 +15,8 @@
   instructor: "Prof. Bálint Virág"
   term: "Winter 2019"
   url: "/files/course-notes/uoft-mat1601h-notes.pdf"
-  sha256: "ece4ecf4a14f08cc6767aee73bde3d09b4dddb0d9b4f411bd1b47629f99585b4"
-  bytes: 932256
+  sha256: "42b52a480607f7519ac57cae1dca721cb268066fb282de346d028f8c462af6a1"
+  bytes: 975235
 - id: "uoft-sta2101h"
   institution: "University of Toronto"
   course_code: "STA 2101H"
@@ -24,8 +24,8 @@
   instructor: "Prof. Jerry Brunner"
   term: "Fall 2018"
   url: "/files/course-notes/uoft-sta2101h-notes.pdf"
-  sha256: "d402d2c0429860f07432fc1e3bb03e368fa205180a1bdfb10adfc540b4adf1b4"
-  bytes: 880890
+  sha256: "7a89bf9daffb039dd5fc47240ffd706e32ab2f8513e99aca18fa9f71a126b81c"
+  bytes: 873402
 - id: "uoft-sta2111h"
   institution: "University of Toronto"
   course_code: "STA 2111H"
@@ -33,8 +33,8 @@
   instructor: "Professor Zhou Zhou"
   term: "Fall 2018"
   url: "/files/course-notes/uoft-sta2111h-notes.pdf"
-  sha256: "4ac3b5f5c79b297ea3f4e0ea7402f57c121d8d3f02c973ff9051bcdf50ebce9c"
-  bytes: 771353
+  sha256: "4a4950d6109b2f7d0dba0226ed81b7c4e576ef3c73e6eed15088208b654bf944"
+  bytes: 783961
 - id: "uoft-sta2201h"
   institution: "University of Toronto"
   course_code: "STA 2201H"
@@ -42,8 +42,8 @@
   instructor: "Prof. Patrick Brown"
   term: "Winter 2019"
   url: "/files/course-notes/uoft-sta2201h-notes.pdf"
-  sha256: "7d900df85f54dd272171d29db4af4205e4304d7ce4c415444a7e29f5ead0dacd"
-  bytes: 1368847
+  sha256: "c7c7486f70690559278f9250e5087f4ad17fb818bf602e702d4fa0c1615d974e"
+  bytes: 1393596
 - id: "uoft-sta3000y-i"
   institution: "University of Toronto"
   course_code: "STA 3000Y"
@@ -51,8 +51,8 @@
   instructor: "Professor Daniel Roy"
   term: "Fall 2018"
   url: "/files/course-notes/uoft-sta3000y-i-notes.pdf"
-  sha256: "2ef1d8a09fb56321afbe1d2fbf9539134517b2e2f282d8f88703be17fd322832"
-  bytes: 882544
+  sha256: "c3373ed992536f8f6f9c01686816374a581997366a613c3b2cc09d50347eb104"
+  bytes: 918369
 - id: "uoft-sta3000y-ii"
   institution: "University of Toronto"
   course_code: "STA 3000Y"
@@ -60,8 +60,8 @@
   instructor: "Professor Qiang Sun"
   term: "Winter 2019"
   url: "/files/course-notes/uoft-sta3000y-ii-notes.pdf"
-  sha256: "4cfd3042af05c77b8e241c736794d67dcd26ed708a6390d25c78e2ae4157fef8"
-  bytes: 939824
+  sha256: "3af1d918ff483e1eeb0798afbe6b653d076e5a15744a9b97d3eebb14000db29b"
+  bytes: 971352
 - id: "uoft-sta3431h"
   institution: "University of Toronto"
   course_code: "STA 3431H"
@@ -69,8 +69,8 @@
   instructor: "Prof. Jeffrey S. Rosenthal"
   term: "Fall 2019"
   url: "/files/course-notes/uoft-sta3431h-notes.pdf"
-  sha256: "cd508e2b954b779940e77fa46ff59f8f48633fb88418cf6240fb0bff14ecf587"
-  bytes: 1585416
+  sha256: "3e0e103b5f2625c331ea5cefac0b7203b3b785eb186d7b71d399ff495d93fa72"
+  bytes: 1589614
 - id: "uoft-sta4508h"
   institution: "University of Toronto"
   course_code: "STA 4508H"
@@ -78,8 +78,8 @@
   instructor: "Prof. Nancy Reid"
   term: "Winter 2022"
   url: "/files/course-notes/uoft-sta4508h-notes.pdf"
-  sha256: "0168a5ffcb0c32fd5641707f827fef487fc8ccc2438b8538338ee841127059ee"
-  bytes: 837912
+  sha256: "aa28f892361088c2d6f9023852d8d8393a517b3c2fe0f36b407da9e9076bd937"
+  bytes: 841272
 - id: "uoft-sta4519h"
   institution: "University of Toronto"
   course_code: "STA 4519H"
@@ -87,8 +87,8 @@
   instructor: "Professor Leonard Wong"
   term: "Fall 2019"
   url: "/files/course-notes/uoft-sta4519h-notes.pdf"
-  sha256: "537adbed389419b1acbe137a4ab258a7e152aeec7ad857f16495e0d36629a187"
-  bytes: 819675
+  sha256: "0665871ba8424364196f0a4baa8da5912f15fecf7cba729afb0a74f4f787f188"
+  bytes: 826206
 - id: "uoft-sta4528h"
   institution: "University of Toronto"
   course_code: "STA 4528H"
@@ -96,8 +96,8 @@
   instructor: "Prof. Silvana Pesenti"
   term: "Winter 2021"
   url: "/files/course-notes/uoft-sta4528h-notes.pdf"
-  sha256: "31bb28c54d2f068a657f8f1d316402963295211475c37bfd37001e152d9720ad"
-  bytes: 5277817
+  sha256: "ce7f13ebdac7f3a3dde8c11e84385faa1bcfde5584eb9b2fbd4b4ec02ef1301c"
+  bytes: 5285795
 - id: "uoft-sta4531h"
   institution: "University of Toronto"
   course_code: "STA 4531H"
@@ -105,8 +105,8 @@
   instructor: "Prof. Leonard Wong"
   term: "Fall 2022"
   url: "/files/course-notes/uoft-sta4531h-notes.pdf"
-  sha256: "b476503b468ca2abdf95dcf94d9f0f924184dc38365b054a690cac54e69a0dda"
-  bytes: 796961
+  sha256: "7c98c4738c275226460329f3851210b7c53a5982a858d8afedca7be69f801629"
+  bytes: 812027
 - id: "uw-actsc231"
   institution: "University of Waterloo"
   course_code: "ACTSC 231"
@@ -114,8 +114,8 @@
   instructor: "Prof. Javid Ali"
   term: "Fall 2013"
   url: "/files/course-notes/uw-actsc231-notes.pdf"
-  sha256: "7709cda68a1dc6f228095fedc7723b90ec0080bc83007ea2c125f61984d32e5a"
-  bytes: 783189
+  sha256: "a161103f4b4506489c35897168891cecee3684084268ed5757beb0cfdecd61ac"
+  bytes: 814322
 - id: "uw-actsc372"
   institution: "University of Waterloo"
   course_code: "ACTSC 372"
@@ -123,8 +123,8 @@
   instructor: "Prof. Hany Fahmy"
   term: "Spring 2014"
   url: "/files/course-notes/uw-actsc372-notes.pdf"
-  sha256: "105fe02c8db94b7062ab15120992f8e35019fc85114c54a5588c02b371db6eb9"
-  bytes: 753117
+  sha256: "62012a51fc4675e53b2689f0d624dc21530814cc8ed35e069f090739ea2d044f"
+  bytes: 794475
 - id: "uw-actsc445"
   institution: "University of Waterloo"
   course_code: "ACTSC 445"
@@ -132,8 +132,8 @@
   instructor: "Prof. David Saunders"
   term: "Fall 2015"
   url: "/files/course-notes/uw-actsc445-notes.pdf"
-  sha256: "d7ca7d4838ff30172929f165ee864f803341d75aabc98d49d1a658ba9e8f63da"
-  bytes: 1904635
+  sha256: "22caf89f62af5aa74cd7a3f5c2e6fe1ed239ddcb0cae910e5deaef78a98051f5"
+  bytes: 1951801
 - id: "uw-actsc446"
   institution: "University of Waterloo"
   course_code: "ACTSC 446"
@@ -141,8 +141,8 @@
   instructor: "Prof. Bin Li"
   term: "Winter 2015"
   url: "/files/course-notes/uw-actsc446-notes.pdf"
-  sha256: "45181f533a2151c956453af20e1b7cb0e7ec04d2add7906bb8a26824f347232b"
-  bytes: 1022039
+  sha256: "d57befa7dcfa616bc3c4b9a178a071564e4612bb48b3bf03350c77276cf8ece5"
+  bytes: 1037593
 - id: "uw-afm131"
   institution: "University of Waterloo"
   course_code: "AFM 131"
@@ -150,8 +150,8 @@
   instructor: "Prof. Bob Sproule"
   term: "Winter 2013"
   url: "/files/course-notes/uw-afm131-notes.pdf"
-  sha256: "aa4ffad285e7be0a46f3f94bd1cec3363ce43a0944f7db461cf33b76951b655c"
-  bytes: 461030
+  sha256: "c56d9451c0fe2f8648b6c5c7c377862a142b3518aa7a679f14174413d8004f32"
+  bytes: 473167
 - id: "uw-amath350"
   institution: "University of Waterloo"
   course_code: "AMATH 350"
@@ -159,8 +159,8 @@
   instructor: "Prof. David Harmsworth"
   term: "Winter 2015"
   url: "/files/course-notes/uw-amath350-notes.pdf"
-  sha256: "05f93367f2484cc38b201c1c6ab7503e0032e2f1859f3b2a7644b2d50d6fe9e4"
-  bytes: 810476
+  sha256: "d7151f7336ed1ec8955b56bc4ff90f1a10cb606b85ca17acbf569ed8484d4299"
+  bytes: 808511
 - id: "uw-co250"
   institution: "University of Waterloo"
   course_code: "CO 250"
@@ -168,8 +168,8 @@
   instructor: "Prof. Bertrand Guenin"
   term: "Winter 2014"
   url: "/files/course-notes/uw-co250-notes.pdf"
-  sha256: "a408a6421823b677765578ac4abc729aedb33f7017b3f4a4a81d19ac992631cd"
-  bytes: 828230
+  sha256: "7e667469b552e6929dfc6e0e49b0b613f3a14c1d4e62b043c53ccbdf08011b62"
+  bytes: 875288
 - id: "uw-co372"
   institution: "University of Waterloo"
   course_code: "CO 372"
@@ -177,8 +177,8 @@
   instructor: "Prof. Wei Xu"
   term: "Fall 2014"
   url: "/files/course-notes/uw-co372-notes.pdf"
-  sha256: "ab5b7c053c2aae1dc1224acd5f169c264ed91f96a7c72a470998541c95c6cbd3"
-  bytes: 690614
+  sha256: "75c4bcae1a0e0c75c007d8958239c4cefb309cdbf5e178d99332559188a4410f"
+  bytes: 729324
 - id: "uw-cs371"
   institution: "University of Waterloo"
   course_code: "CS 371"
@@ -186,8 +186,8 @@
   instructor: "Prof. Lori Case"
   term: "Winter 2016"
   url: "/files/course-notes/uw-cs371-notes.pdf"
-  sha256: "b22398e052b94451ef9c944f3cd50c16ef01dc28beac9ca5bc5627e760997170"
-  bytes: 1071386
+  sha256: "5e4c08c06947e644a40d604feb97c5a3ceaeeb59e43c2a4b3111c3aeefc25d21"
+  bytes: 1129179
 - id: "uw-cs476"
   institution: "University of Waterloo"
   course_code: "CS 476"
@@ -195,8 +195,8 @@
   instructor: "Prof. Wei Xu"
   term: "Winter 2015"
   url: "/files/course-notes/uw-cs476-notes.pdf"
-  sha256: "e086dace7d85f864c89b12c6b6253cba9243a943f9df3fcd2eef054bc6e93419"
-  bytes: 1022158
+  sha256: "60a65d19b3369de7eed89364c15995bf843db2c816043961ab988975098bd954"
+  bytes: 1048664
 - id: "uw-econ201"
   institution: "University of Waterloo"
   course_code: "ECON 201"
@@ -204,8 +204,8 @@
   instructor: "Prof. Mohamad Ghaziaskar"
   term: "Fall 2015"
   url: "/files/course-notes/uw-econ201-notes.pdf"
-  sha256: "8e49c30b25ed78900db8f8fb5fa1ed9895ebb7bd2239254d1ad7d2d224269820"
-  bytes: 654775
+  sha256: "daa56debd8876a68134fb85339b1c5949e5e8f86b3b333d198273ab4973079fe"
+  bytes: 683411
 - id: "uw-econ202"
   institution: "University of Waterloo"
   course_code: "ECON 202"
@@ -213,8 +213,8 @@
   instructor: "Prof. Fiona Rahman"
   term: "Winter 2016"
   url: "/files/course-notes/uw-econ202-notes.pdf"
-  sha256: "71c6fee6ec2911c4d47b97a8eb18544daadbd5d54f83b851fe4e7df98e06c9de"
-  bytes: 767171
+  sha256: "33903f81cb8e21abed6919175d12442c30be9c58b30352bf037c1db874300c98"
+  bytes: 798870
 - id: "uw-math145"
   institution: "University of Waterloo"
   course_code: "MATH 145"
@@ -222,8 +222,8 @@
   instructor: "Prof. Alfred Menezes"
   term: "Fall 2012"
   url: "/files/course-notes/uw-math145-notes.pdf"
-  sha256: "c8b192b15dfbf5a48a8cbdd7a196ffafddbb3c3b8e8cbb7b12a1df79efd4be43"
-  bytes: 843890
+  sha256: "95896a10f7e43b45c6e4a45c0202b145fc831fbbb2f9bc16ef8809f63ce49b62"
+  bytes: 863487
 - id: "uw-math147"
   institution: "University of Waterloo"
   course_code: "MATH 147"
@@ -231,8 +231,8 @@
   instructor: "Prof. Kathryn Hare"
   term: "Fall 2012"
   url: "/files/course-notes/uw-math147-notes.pdf"
-  sha256: "fb7f0230a9513ce6aba1f927acc1ff0e3d0c321df6a7ccea4350a8349739a3a7"
-  bytes: 849150
+  sha256: "f0b4b3fa05a356c50ca98e1a6ca95f90c6ec147f9b61a3f1dcd402849f9a852a"
+  bytes: 866427
 - id: "uw-math247"
   institution: "University of Waterloo"
   course_code: "MATH 247"
@@ -240,8 +240,8 @@
   instructor: "Prof. Alexandru Nica"
   term: "Fall 2013"
   url: "/files/course-notes/uw-math247-notes.pdf"
-  sha256: "d09d6b8eecf77c45600ea4a40112be2b967902f05546fa25683cd6df83302338"
-  bytes: 856430
+  sha256: "c8d4b17844d227733c31289d7073f9fea81df6c935b7076cbfeeff7ae38ff180"
+  bytes: 909376
 - id: "uw-math249"
   institution: "University of Waterloo"
   course_code: "MATH 249"
@@ -249,8 +249,8 @@
   instructor: "Prof. Kevin Purbhoo"
   term: "Fall 2015"
   url: "/files/course-notes/uw-math249-notes.pdf"
-  sha256: "b33c3b2c07c4f973da3e833ddeb1836e4651a9ce2528eadd52123b385a2a3eb8"
-  bytes: 1019107
+  sha256: "d52f1728073a54bb96d4fd960cb292797bfe261d98f328530e3fe8630a8a1164"
+  bytes: 1039168
 - id: "uw-pmath334"
   institution: "University of Waterloo"
   course_code: "PMATH 334"
@@ -258,8 +258,8 @@
   instructor: "Prof. Blake Madill"
   term: "Winter 2016"
   url: "/files/course-notes/uw-pmath334-notes.pdf"
-  sha256: "348d1e02c06b52b74840e2e3ff215185966e9eaef6cd945a90a6968261dbce8c"
-  bytes: 869689
+  sha256: "afc54711c104671ccd4634b33e240b4d38f47c9bbfdca3f89fcca86439c351ea"
+  bytes: 899676
 - id: "uw-pmath336"
   institution: "University of Waterloo"
   course_code: "PMATH 336"
@@ -267,8 +267,8 @@
   instructor: "Prof. Tyrone Ghaswala"
   term: "Fall 2015"
   url: "/files/course-notes/uw-pmath336-notes.pdf"
-  sha256: "c58f39ff6d7483557b08d44f2007b54eaebae11e2768a826c3262bf935d4134c"
-  bytes: 917734
+  sha256: "62b45b8edc3fb15f59e07f00fba1d902842f8b219442ef77446c5e397ed56a42"
+  bytes: 931407
 - id: "uw-pmath340"
   institution: "University of Waterloo"
   course_code: "PMATH 340"
@@ -276,8 +276,8 @@
   instructor: "Prof. Wentang Kuo"
   term: "Fall 2015"
   url: "/files/course-notes/uw-pmath340-notes.pdf"
-  sha256: "828454445d0285b1ccdedb9bb136417dd0b8e530bf8ad170a212758e58cf9782"
-  bytes: 739290
+  sha256: "69c51a3fd36aae80b51127c4c7c23a0c4a41a11e0780c0ad4a483dd1cad4baca"
+  bytes: 755236
 - id: "uw-pmath348"
   institution: "University of Waterloo"
   course_code: "PMATH 348"
@@ -285,8 +285,8 @@
   instructor: "Prof. Frank Zorzitto"
   term: "Winter 2015"
   url: "/files/course-notes/uw-pmath348-notes.pdf"
-  sha256: "130601e4159519c78e4a2196415f103e77f7a42310bb1fbcbb6280d7141361a6"
-  bytes: 1036795
+  sha256: "1d831ef2e56f82a9f70394a2c6ee288aeb8fd7b0d6a626e79c0d944cf5ea4db1"
+  bytes: 1051159
 - id: "uw-pmath351"
   institution: "University of Waterloo"
   course_code: "PMATH 351"
@@ -294,8 +294,8 @@
   instructor: "Prof. Michael Harz"
   term: "Fall 2014"
   url: "/files/course-notes/uw-pmath351-notes.pdf"
-  sha256: "2be1ba3c3135dbc303a7d5aa6544e5238f57a7c4b36f2fcccd55d302a53ce9ad"
-  bytes: 886186
+  sha256: "93bf26be7012421f91ed0996e811434e649a73e22b355af3f21dda8f2bffaa91"
+  bytes: 923233
 - id: "uw-pmath352"
   institution: "University of Waterloo"
   course_code: "PMATH 352"
@@ -303,8 +303,8 @@
   instructor: "Prof. Frank Zorzitto"
   term: "Winter 2014"
   url: "/files/course-notes/uw-pmath352-notes.pdf"
-  sha256: "4b5f93398a41d11b39563acb20da88f60260e8b248b7da2975ab2e22bde13dbd"
-  bytes: 1182404
+  sha256: "1e244dff072dcdc66c1a118037e454145d9cd86e359547dd277c6df0719e4398"
+  bytes: 1239525
 - id: "uw-pmath450"
   institution: "University of Waterloo"
   course_code: "PMATH 450"
@@ -312,8 +312,8 @@
   instructor: "Prof. Mahya Ghandehari"
   term: "Winter 2015"
   url: "/files/course-notes/uw-pmath450-notes.pdf"
-  sha256: "9721c17fc6da4b7de3fe025bbf1b3dbb28dab323e3ddfdf9c8ff2efc2b40db8d"
-  bytes: 938019
+  sha256: "bf708822f7f2a4728a27a93dc327bfef5c9aab5f7fae66c943ecf0c1f9aed3f4"
+  bytes: 948003
 - id: "uw-pmath451"
   institution: "University of Waterloo"
   course_code: "PMATH 451"
@@ -321,8 +321,8 @@
   instructor: "Prof. Christopher Schafhauser"
   term: "Winter 2016"
   url: "/files/course-notes/uw-pmath451-notes.pdf"
-  sha256: "46df67e0f7c447e612ba43550798136d535e876e05593731e7cec47b520e501e"
-  bytes: 1002846
+  sha256: "cab30c9283ee76e08057aec578757d7d2ffa16cb46e8195187b80ec9f8a430ab"
+  bytes: 1053630
 - id: "uw-stat240"
   institution: "University of Waterloo"
   course_code: "STAT 240"
@@ -330,8 +330,8 @@
   instructor: "Prof. Christopher Small"
   term: "Fall 2013"
   url: "/files/course-notes/uw-stat240-notes.pdf"
-  sha256: "4624d94f043e853622066f7db5c6d216bd3f0cf000190051bf9e19f6d3aaf4ed"
-  bytes: 849896
+  sha256: "82f48455a4325a1f88b371fa374ded7b253ff9ae981338022fdb463931e3df1e"
+  bytes: 880961
 - id: "uw-stat241"
   institution: "University of Waterloo"
   course_code: "STAT 241"
@@ -339,8 +339,8 @@
   instructor: "Prof. Mu Zhu"
   term: "Winter 2014"
   url: "/files/course-notes/uw-stat241-notes.pdf"
-  sha256: "dca993b4320aaa9b68a0239a976ccd2e982117c132320e9cbacda27fc8d5947c"
-  bytes: 783193
+  sha256: "6298ec7eded07b4213022db2c9fd6a20734a9051fd3419522d17383985cafeaa"
+  bytes: 788464
 - id: "uw-stat331"
   institution: "University of Waterloo"
   course_code: "STAT 331"
@@ -348,8 +348,8 @@
   instructor: "Prof. Javid Ali"
   term: "Spring 2014"
   url: "/files/course-notes/uw-stat331-notes.pdf"
-  sha256: "201b07088cf26192ea42bdaf977b9f5a480266c1c80c6e4a6be7a4fb61220c2f"
-  bytes: 1726686
+  sha256: "07128d0af07f9b64189b6d7c33cdcb7bca02d067acb381c7ab225a3943d54fcf"
+  bytes: 1772061
 - id: "uw-stat332"
   institution: "University of Waterloo"
   course_code: "STAT 332"
@@ -357,8 +357,8 @@
   instructor: "Prof. Ryan P. Browne"
   term: "Winter 2016"
   url: "/files/course-notes/uw-stat332-notes.pdf"
-  sha256: "6866f2979e91b5ea6e1b2ea72fb8275c8ab545953c225ab0c5aa225eaf0b3a87"
-  bytes: 799493
+  sha256: "a8a6f34c2f96332bc800b7541865c9a54dd70ae793561eba951f9242f0230863"
+  bytes: 811018
 - id: "uw-stat333"
   institution: "University of Waterloo"
   course_code: "STAT 333"
@@ -366,8 +366,8 @@
   instructor: "Prof. Diana Skrzydlo"
   term: "Spring 2014"
   url: "/files/course-notes/uw-stat333-notes.pdf"
-  sha256: "a0be0c4f0ee57e17a7a51ccf29fc9838e4492ccbb455390262765c74643b6ccc"
-  bytes: 830675
+  sha256: "95bd56b2a132d2ebf6ccc7b94065b8f3d9c8d215f63c69e076298d79c456c59a"
+  bytes: 848325
 - id: "uw-stat340"
   institution: "University of Waterloo"
   course_code: "STAT 340"
@@ -375,8 +375,8 @@
   instructor: "Prof. Marius Hofert"
   term: "Winter 2015"
   url: "/files/course-notes/uw-stat340-notes.pdf"
-  sha256: "12c229e410a4dc5025616d5e743070cb89097937d523ad62056969082f31c4b7"
-  bytes: 949860
+  sha256: "26a12c6fc84d3fc4bf30255aedc1e1bdb17e24625f46de55fd7ccfe74bc68c76"
+  bytes: 960343
 - id: "uw-stat431"
   institution: "University of Waterloo"
   course_code: "STAT 431"
@@ -384,8 +384,8 @@
   instructor: "Prof. Cecilia Cotton"
   term: "Winter 2016"
   url: "/files/course-notes/uw-stat431-notes.pdf"
-  sha256: "d3047653d0bbe8b0b258035608f164abcf892d652c2549d5fafc11a907133008"
-  bytes: 1102905
+  sha256: "6170eef61e32ec82cfdf391f2789d3197a5a5e6d2f5def209940cbee43cfe8a3"
+  bytes: 1108211
 - id: "uw-stat433"
   institution: "University of Waterloo"
   course_code: "STAT 433"
@@ -393,8 +393,8 @@
   instructor: "Prof. Yi Shen"
   term: "Fall 2014"
   url: "/files/course-notes/uw-stat433-notes.pdf"
-  sha256: "748a5c03e757dd551eb746bcd42f8b888947e224011774a537b708d9ff62d800"
-  bytes: 784780
+  sha256: "6524510f2914c44d4cc5c66f24af217fbcb5eab4a0f871b3a99026eb28bd3990"
+  bytes: 800509
 - id: "uw-stat443"
   institution: "University of Waterloo"
   course_code: "STAT 443"
@@ -402,8 +402,8 @@
   instructor: "Prof. Reza Remezan"
   term: "Fall 2014"
   url: "/files/course-notes/uw-stat443-notes.pdf"
-  sha256: "27b055ac6a79ab18552e14d18dc2c05786bb08402e1401798085103b6cb5e584"
-  bytes: 837521
+  sha256: "e7fe2b55f22f72e36ed0c32d18258caea0cf64768eb124e8e5743bb916683b83"
+  bytes: 853980
 - id: "uw-stat946"
   institution: "University of Waterloo"
   course_code: "STAT 946"
@@ -411,5 +411,5 @@
   instructor: "Prof. Marius Hofert"
   term: "Spring 2016"
   url: "/files/course-notes/uw-stat946-notes.pdf"
-  sha256: "7f82989ab86afb0eb145fdd9482d90a4325b71f1f3f0faab36979e9dee25e959"
-  bytes: 5891368
+  sha256: "0904e13517da832b5c317ec7c443a3a5b3e5b09801155bf0ada1088c270a2890"
+  bytes: 5904069
