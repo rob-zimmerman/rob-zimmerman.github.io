@@ -123,8 +123,8 @@
   instructor: "Prof. Brent Matheson"
   term: "Winter 2014"
   url: "/files/course-notes/uw-actsc371-rz-notes.pdf"
-  sha256: "9841fe83a6cee39fa0924d59b22d6143c3f7f102f8fc8a284723e4670f0fe170"
-  bytes: 709580
+  sha256: "3d528a6c5cb8c0f3fd2f7320043a29395ffef8c26c6f9b51ccf99b9b7272a347"
+  bytes: 741928
 - id: "uw-actsc372"
   institution: "University of Waterloo"
   course_code: "ACTSC 372"
@@ -132,8 +132,8 @@
   instructor: "Prof. Hany Fahmy"
   term: "Spring 2014"
   url: "/files/course-notes/uw-actsc372-rz-notes.pdf"
-  sha256: "db808455d75c1f8e439edf76c90bd86c9da1db866ed97abc692928b6bb0ecc54"
-  bytes: 794473
+  sha256: "35c1baae7a33da7875b616d7f5a1d6fb97c50da3976a2965b180d707b114fc8e"
+  bytes: 794585
 - id: "uw-actsc445"
   institution: "University of Waterloo"
   course_code: "ACTSC 445"
@@ -177,8 +177,8 @@
   instructor: "Prof. Bertrand Guenin"
   term: "Winter 2014"
   url: "/files/course-notes/uw-co250-rz-notes.pdf"
-  sha256: "cd813c6bc493152e3a6ab88ef7380d57afec53613dcd2a4dc2760069325e7828"
-  bytes: 874955
+  sha256: "475e7acef1cd088a1599f786dae6cefcfab73603ae200781b989e4200a584f9e"
+  bytes: 874869
 - id: "uw-co372"
   institution: "University of Waterloo"
   course_code: "CO 372"
@@ -276,8 +276,8 @@
   instructor: "Prof. Tyrone Ghaswala"
   term: "Fall 2015"
   url: "/files/course-notes/uw-pmath336-rz-notes.pdf"
-  sha256: "9dd5e95503deec404bab344ea4bb8ee906dda8c05be800e08963efc167fbb64a"
-  bytes: 930937
+  sha256: "00da2179b7d05c40f7f82b45b914ec57ecbb94ffa14cdf5058ac91534fa09499"
+  bytes: 930842
 - id: "uw-pmath340"
   institution: "University of Waterloo"
   course_code: "PMATH 340"
@@ -357,8 +357,8 @@
   instructor: "Prof. Javid Ali"
   term: "Spring 2014"
   url: "/files/course-notes/uw-stat331-rz-notes.pdf"
-  sha256: "3c41eac4f6bd3c82237a273802d73ea27fe252003c97e89f4bae3a232166f462"
-  bytes: 1772039
+  sha256: "e11889f3307c0902984487efe375d7d2f0238d99f7d906d0f429005dcec7322e"
+  bytes: 1771744
 - id: "uw-stat332"
   institution: "University of Waterloo"
   course_code: "STAT 332"
@@ -366,8 +366,8 @@
   instructor: "Prof. Ryan P. Browne"
   term: "Winter 2016"
   url: "/files/course-notes/uw-stat332-rz-notes.pdf"
-  sha256: "571aaddadbd7cc791a2c52dcc8cb0696bb9853820ae980ac8dc5ddf3479f93fa"
-  bytes: 811024
+  sha256: "857a6f6560c737b3f6f2994bb9c7ff068cd0f0998183d2eb3d7f93f8337206e2"
+  bytes: 811056
 - id: "uw-stat333"
   institution: "University of Waterloo"
   course_code: "STAT 333"
@@ -375,8 +375,8 @@
   instructor: "Prof. Diana Skrzydlo"
   term: "Spring 2014"
   url: "/files/course-notes/uw-stat333-rz-notes.pdf"
-  sha256: "1c9afbbcc8d7f40928df601161a4f91fe68de00e10324ac413d7f82eb02c4abb"
-  bytes: 848215
+  sha256: "a1dd287e36aadde545aee9a3737329f01738a6d0ff08f8eaba5669d41faa74ed"
+  bytes: 848642
 - id: "uw-stat340"
   institution: "University of Waterloo"
   course_code: "STAT 340"
@@ -411,8 +411,8 @@
   instructor: "Prof. Reza Remezan"
   term: "Fall 2014"
   url: "/files/course-notes/uw-stat443-rz-notes.pdf"
-  sha256: "3efd5375edec437bd15c2425d1675e432f8af83e02307450729f633e4b8fc0ca"
-  bytes: 874556
+  sha256: "db99e7ca89ac9370ac4812c1b6e7bd2edd12d7d3889be54e610f6c1873fff3e5"
+  bytes: 874662
 - id: "uw-stat946"
   institution: "University of Waterloo"
   course_code: "STAT 946"
