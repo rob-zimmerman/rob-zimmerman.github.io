@@ -123,8 +123,8 @@
   instructor: "Prof. Brent Matheson"
   term: "Winter 2014"
   url: "/files/course-notes/uw-actsc371-rz-notes.pdf"
-  sha256: "74484074a68c2a74abf0e9868c6f7ef0e31eeb90022e4b1382be7de9049dfeb6"
-  bytes: 739503
+  sha256: "9841fe83a6cee39fa0924d59b22d6143c3f7f102f8fc8a284723e4670f0fe170"
+  bytes: 709580
 - id: "uw-actsc372"
   institution: "University of Waterloo"
   course_code: "ACTSC 372"
