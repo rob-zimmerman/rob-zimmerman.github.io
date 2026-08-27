@@ -60,8 +60,8 @@
   instructor: "Professor Qiang Sun"
   term: "Winter 2019"
   url: "/files/course-notes/uoft-sta3000y-ii-rz-notes.pdf"
-  sha256: "4a26f4389a11f8df248d5945a4fa7671944192d03834ab73990820e82060dcc0"
-  bytes: 983237
+  sha256: "0b1090abb1f6876578c9592a85c37d787510b1bed62487d882a955911f4913c8"
+  bytes: 995753
 - id: "uoft-sta3431h"
   institution: "University of Toronto"
   course_code: "STA 3431H"
@@ -114,8 +114,8 @@
   instructor: "Prof. Javid Ali"
   term: "Fall 2013"
   url: "/files/course-notes/uw-actsc231-rz-notes.pdf"
-  sha256: "bea626f729428734255029e612c279dc5a6e9a0edc0977505d50c06b80d4d153"
-  bytes: 814322
+  sha256: "99e98afd3bc53d416219c9a65860786e9cf254daaa0c7c8f35ade1fd7ef55d32"
+  bytes: 812872
 - id: "uw-actsc372"
   institution: "University of Waterloo"
   course_code: "ACTSC 372"
@@ -132,8 +132,8 @@
   instructor: "Prof. David Saunders"
   term: "Fall 2015"
   url: "/files/course-notes/uw-actsc445-rz-notes.pdf"
-  sha256: "2674d87dd683ad933b9d392a09d349e782ca12cfc56c96e0ed9673f85ecfea5c"
-  bytes: 1949269
+  sha256: "9c647c9df4a74ca4eeda1aae88e96f0a09da5e3ba3df131894ad6c224b69b4d8"
+  bytes: 1949268
 - id: "uw-actsc446"
   institution: "University of Waterloo"
   course_code: "ACTSC 446"
@@ -213,8 +213,8 @@
   instructor: "Prof. Fiona Rahman"
   term: "Winter 2016"
   url: "/files/course-notes/uw-econ202-rz-notes.pdf"
-  sha256: "e6aaa893c6ced4f078a8651f367cdabcbe9b286e503e9176d5ce1854c7b3409e"
-  bytes: 798886
+  sha256: "ed49c14c736d45d581babdbd3612c2ccac7af7edc4f006852ba0ace4a3a75d02"
+  bytes: 798830
 - id: "uw-math145"
   institution: "University of Waterloo"
   course_code: "MATH 145"
@@ -222,8 +222,8 @@
   instructor: "Prof. Alfred Menezes"
   term: "Fall 2012"
   url: "/files/course-notes/uw-math145-rz-notes.pdf"
-  sha256: "64ffe700ce3277bc085ade67d06189b2b51d347e85401d2919b167f7429af1e7"
-  bytes: 885555
+  sha256: "9b6afd119a5f54f544810e64520008957006d8a7bcbd47edb79a92eb6af11008"
+  bytes: 885506
 - id: "uw-math147"
   institution: "University of Waterloo"
   course_code: "MATH 147"
@@ -231,8 +231,8 @@
   instructor: "Prof. Kathryn Hare"
   term: "Fall 2012"
   url: "/files/course-notes/uw-math147-rz-notes.pdf"
-  sha256: "4228e167bb52cf75e2ad21e8c0b51e88884038ea3d8618df60519663bc90d990"
-  bytes: 865928
+  sha256: "502569643f93dfedc5bd103c8be8167988390f391365b49fd85418952394d260"
+  bytes: 895218
 - id: "uw-math247"
   institution: "University of Waterloo"
   course_code: "MATH 247"
@@ -240,8 +240,8 @@
   instructor: "Prof. Alexandru Nica"
   term: "Fall 2013"
   url: "/files/course-notes/uw-math247-rz-notes.pdf"
-  sha256: "e8568f06d32ab2abc3670be6d97de898803a61fac4cdb71942b2793b6d733c6b"
-  bytes: 906224
+  sha256: "5ea4fe16161130af7c54c2016c5fba51aa5103c4cddac51448dd3c59f5e3fc6c"
+  bytes: 906485
 - id: "uw-math249"
   institution: "University of Waterloo"
   course_code: "MATH 249"
@@ -249,8 +249,8 @@
   instructor: "Prof. Kevin Purbhoo"
   term: "Fall 2015"
   url: "/files/course-notes/uw-math249-rz-notes.pdf"
-  sha256: "0c59dcfa96feb10c82813f62aa204147edd0d62d028ea1e89a7e44a30bc27369"
-  bytes: 1037863
+  sha256: "3a5c77d61d2ff4da059c50830a6f55e47e01b73d25c6b0598698bd0a6c56eb19"
+  bytes: 1037822
 - id: "uw-pmath334"
   institution: "University of Waterloo"
   course_code: "PMATH 334"
@@ -258,8 +258,8 @@
   instructor: "Prof. Blake Madill"
   term: "Winter 2016"
   url: "/files/course-notes/uw-pmath334-rz-notes.pdf"
-  sha256: "27a4047df88369dcb4f6f16a8ec3602b14e7036553e5cf292cf1909519703735"
-  bytes: 916032
+  sha256: "b6676773cc43bf8559ec68f5cf24de41de630661b10b8c3b8816be38762d0b08"
+  bytes: 924032
 - id: "uw-pmath336"
   institution: "University of Waterloo"
   course_code: "PMATH 336"
@@ -294,8 +294,8 @@
   instructor: "Prof. Michael Harz"
   term: "Fall 2014"
   url: "/files/course-notes/uw-pmath351-rz-notes.pdf"
-  sha256: "272c1a0b1cf85ba6b0ec7e25d6b413ac76a8a3366010e32c2f203a1e10e9b429"
-  bytes: 975619
+  sha256: "cfb1e304c3268d5d22b85e6b2557f147d6a6a54b00291151c7c006754d69b28a"
+  bytes: 975581
 - id: "uw-pmath352"
   institution: "University of Waterloo"
   course_code: "PMATH 352"
@@ -312,8 +312,8 @@
   instructor: "Prof. Mahya Ghandehari"
   term: "Winter 2015"
   url: "/files/course-notes/uw-pmath450-rz-notes.pdf"
-  sha256: "9d5d591ea827152783bcafaf383708b9c0baadcf3a435a6fc3c64612e8344392"
-  bytes: 992019
+  sha256: "5c1c4422b2d3101bc61bd03484d3f733120ad340f3da0f4338553fe0611d2dd5"
+  bytes: 1008770
 - id: "uw-pmath451"
   institution: "University of Waterloo"
   course_code: "PMATH 451"
@@ -321,8 +321,8 @@
   instructor: "Prof. Christopher Schafhauser"
   term: "Winter 2016"
   url: "/files/course-notes/uw-pmath451-rz-notes.pdf"
-  sha256: "fef1c3e343c1cfe380bbb3eabd0f73e1663de1125928a23a54e36af878be79ef"
-  bytes: 1092849
+  sha256: "7a8360dde1bcbb1a55360ceecff9a658ffb1e3b622f9daecd5adf8affb67aa0b"
+  bytes: 1100879
 - id: "uw-stat240"
   institution: "University of Waterloo"
   course_code: "STAT 240"
@@ -375,8 +375,8 @@
   instructor: "Prof. Marius Hofert"
   term: "Winter 2015"
   url: "/files/course-notes/uw-stat340-rz-notes.pdf"
-  sha256: "e0ebe8a5ebcd4309dbfe91a330db3a8153e2eb42bf91694f2ffe1649414d1c1d"
-  bytes: 959602
+  sha256: "f95df1430521fedbe966c5ba109184c496f6fd2816486bb7dd9f4d862b9dc0ca"
+  bytes: 959573
 - id: "uw-stat431"
   institution: "University of Waterloo"
   course_code: "STAT 431"
@@ -393,8 +393,8 @@
   instructor: "Prof. Yi Shen"
   term: "Fall 2014"
   url: "/files/course-notes/uw-stat433-rz-notes.pdf"
-  sha256: "f577a1a498644085202bc85078e60480b56b59a6e8f1bc7a72ae7c82d7ebe7a8"
-  bytes: 829971
+  sha256: "999c8b37ac0eb7fe638501fde01fcba1b0fa90511762cb74fe56ceb72bbb86c6"
+  bytes: 834971
 - id: "uw-stat443"
   institution: "University of Waterloo"
   course_code: "STAT 443"
@@ -402,8 +402,8 @@
   instructor: "Prof. Reza Remezan"
   term: "Fall 2014"
   url: "/files/course-notes/uw-stat443-rz-notes.pdf"
-  sha256: "5dfadd9f1af114857aa3d7c7bccae169826e6e37f99bc0ed21a8430616c069f4"
-  bytes: 860583
+  sha256: "60fa6bf61804c2699e18f2f42397d2622a8865cddf52038ed5d0f4c1c4b453ff"
+  bytes: 874517
 - id: "uw-stat946"
   institution: "University of Waterloo"
   course_code: "STAT 946"
