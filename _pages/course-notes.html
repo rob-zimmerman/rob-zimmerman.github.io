@@ -6,22 +6,80 @@ author_profile: true
 ---
 
 <p>
-  These are personal lecture notes, not official course materials. They may
-  contain errors, which should be attributed to me rather than to the course
-  instructors.
+  These are typeset course notes from most (but not all<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>) of the courses I took as an undergrad at the University of Waterloo and as a PhD student at the University of Toronto.
 </p>
 
-{% assign institutions = site.data.course_notes | group_by: "institution" %}
-{% for institution in institutions %}
-  <h2>{{ institution.name }}</h2>
-  <ul>
-    {% for note in institution.items %}
-      <li>
-        <a href="{{ note.url | relative_url }}">
-          <strong>{{ note.course_code }}</strong>: {{ note.title }}
-        </a>
-        {% if note.term %}<span> ({{ note.term }})</span>{% endif %}
-      </li>
+<p>
+  Virtually all of them were created by scanning my handwritten notes, using a combination of LLMs and manual transcription to convert them into digital format. The rough process was as follows:
+</p>
+
+<ol>
+  <li>Scan the handwritten notes.</li>
+  <li>
+    Use LLMs to assist with transcription and converting bullet notes into structured digital format.
+  </li>
+  <li>
+    Manually review and correct the digital versions, ensuring accuracy and adherence to a consistent style guide.
+  </li>
+  <li>Organize and upload the finished notes.</li>
+</ol>
+
+<p>
+  Step 3 was by far the most time-consuming: from formatting to proofreading to wording changes<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> to correcting <i>many</i> errors (hopefully not at the cost of new ones) and adding missing assumptions or arguments, to fiddling with the vast array of TikZ figures to make them look right, to ensuring an exact and consistent visual style, to (attempting to) lightly boost the content of some of the more mundane sections. Although LLMs greatly assisted with a lot of the grunt work, there was still a huge amount of manual effort required; the whole project took around eight months of fairly consistent effort in my spare time.<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>
+</p>
+
+<p>
+  However, it was a labour of love, and also very nostalgic. I was inspired by several students of yesteryear whose own typeset notes had helped me considerably during my studies (something that seems to be a relatively common tradition among Waterloo Math and CS students). I give special mention to M.L. Baker, whose collection of exceedingly detailed MATH and PMATH notes was legendary among my classmates. In that spirit, I'm paying it forward, and I hope that the next generation of students can similarly benefit from these.
+</p>
+
+<p>
+  Many of the course instructors have since retired or moved on, and the notes therefore may not directly match the current course content; several of the courses at Waterloo, in particular, have undergone substantial curriculum changes since I took them. Nevertheless, I've tried to make the notes reasonably self-contained so that they can also be used as independent study resources. As part of that effort, I've added some additional explanations, included solutions to problems or completions of proofs originally left as exercises, inserted many additional figures, and made a number of other enhancements to improve clarity and completeness.
+</p>
+
+<p>
+  While I've tried throughout to make the notes as accurate and clear as possible, it should go without saying that there are almost certainly errors, omissions, and inconsistencies here and there.<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup> If you spot one, please let me know so that I can correct it (and give you credit). To be on the safe side: blame any bad things on me, and credit any good things to the original course instructors.<sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup> My immense gratitude goes out to the instructors who in most cases designed the courses and the material with great care and expertise; the quality of the underlying content and structure in these notes is a reflection of their work.
+</p>
+
+<p>
+  For the most part, I have tried not to reproduce slides or board notes completely verbatim. Nevertheless, the content is ultimately derived from material presented in the courses. If you're an instructor who taught one of these courses and you really <i>really</i> want me to remove any content, please contact me and I will <del>begrudgingly</del> happily do what I can (although I do reserve the right to include a passive-aggressive note explaining the removal).
+</p>
+
+<p>
+  To any Waterloo students from my generation who happen to stumble across this page: my notes for MATH 146 (Winter 2013), MATH 148 (Winter 2013), MATH 245 (Spring 2013), STAT 330 (Winter 2015), and PMATH 365 (Winter 2016) are either partially or completely lost. If you happen to have notes from any of these specific offerings, or know someone who does, I'd be very grateful if you could share them with me so that I can complete the collection. Full credit will, of course, be provided.
+</p>
+
+{% assign institution_order = "University of Waterloo|University of Toronto" | split: "|" %}
+{% for institution_name in institution_order %}
+  {% assign institution_notes = site.data.course_notes | where: "institution", institution_name %}
+  <h2><u>{{ institution_name }}</u></h2>
+  <div class="course-note-list">
+    {% for note in institution_notes %}
+      <div class="course-note-entry">
+        <strong>{{ note.course_code }}: {{ note.title }} - {{ note.term }}</strong>
+        {% if note.description_url %}<a href="{{ note.description_url }}">[Description]</a>{% endif %}
+        {% if note.lost %}(lost){% else %}<a href="{{ note.url | relative_url }}">[Notes]</a>{% endif %}
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 {% endfor %}
+
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>The list here excludes a few other courses that I took at Waterloo but elected not to typeset because I saw little value in doing so: ECON 101, AFM 101, AFM 102, GERMAN 101, RUSS 101, and MUSIC 270. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>This included the removal of <i>lots</i> of profanity (mostly not the instructors'...). <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>At the current rate of AI development, I suppose I could've simply waited a year or two until a sufficiently advanced and affordable LLM could simply one-shot the entire project. Oh well. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>As mentioned above, I used LLMs as a first pass in converting my scribbled bullet form notes into proper prose, which I then reviewed and edited to create a more natural voice and flow; while I tried my best to review and edit the output extensively, in the sheer volume of content it's possible that some AI-coded language did make its way through. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>There may also be a few somewhat opinionated remarks scattered throughout the notes &mdash; these should <i>definitely</i> not be attributed to the original course instructors. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
