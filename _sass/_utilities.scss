@@ -443,10 +443,11 @@ body:hover .visually-hidden button {
 
 .footnotes {
   color: mix(#fff, $gray, 25%);
+  font-size: 0.667em;
 
   ol, li, p {
     margin-bottom: 0;
-    font-size: $type-size-6;
+    font-size: inherit;
   }
 }
 
