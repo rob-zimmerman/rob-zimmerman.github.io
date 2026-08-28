@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://rob-zimmerman.ca/sitemap.xml
+Sitemap: https://rob-zimmerman.ca/course-notes-sitemap.xml
