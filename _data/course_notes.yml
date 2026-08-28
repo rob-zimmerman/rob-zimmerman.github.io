@@ -445,7 +445,7 @@
   title: "Methods of Applied Statistics I"
   instructor: "Prof. Jerry Brunner"
   term: "Fall 2018"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta2101h"
   lost: false
   url: "/files/course-notes/uoft-sta2101h-rz-notes.pdf"
   sha256: "67ab25ff3affa574b28aef4cf449996a8c24337a12384898613455f79e7cf80d"
@@ -456,7 +456,7 @@
   title: "Graduate Probability I"
   instructor: "Professor Zhou Zhou"
   term: "Fall 2018"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta2111h"
   lost: false
   url: "/files/course-notes/uoft-sta2111h-rz-notes.pdf"
   sha256: "f89192fa499b8303091b04cb7528fea7023fa7041c58f6495536914683d3dc90"
@@ -467,7 +467,7 @@
   title: "Methods of Applied Statistics II"
   instructor: "Prof. Patrick Brown"
   term: "Winter 2019"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta2201h"
   lost: false
   url: "/files/course-notes/uoft-sta2201h-rz-notes.pdf"
   sha256: "616365f9839e5b9840b245ead821fa70cc1d89e14d6d40318f2504bfe6341170"
@@ -478,7 +478,7 @@
   title: "Advanced Theory of Statistics (I)"
   instructor: "Professor Daniel Roy"
   term: "Fall 2018"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta3000y"
   lost: false
   url: "/files/course-notes/uoft-sta3000y-i-rz-notes.pdf"
   sha256: "fc273eb183e39185e42415bd84bd58e910523f8080bcc507cc7a87bc5be5723f"
@@ -489,7 +489,7 @@
   title: "Advanced Theory of Statistics (II)"
   instructor: "Professor Qiang Sun"
   term: "Winter 2019"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta3000y"
   lost: false
   url: "/files/course-notes/uoft-sta3000y-ii-rz-notes.pdf"
   sha256: "9401c2c74fee5ef6184e8400623d3d486b7e253ccf01c292db8212e48209d587"
@@ -500,7 +500,7 @@
   title: "Monte Carlo Methods"
   instructor: "Prof. Jeffrey S. Rosenthal"
   term: "Fall 2019"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta3431h"
   lost: false
   url: "/files/course-notes/uoft-sta3431h-rz-notes.pdf"
   sha256: "8867bd151a22003f109e34acceda4f3e10f5f953c5ddbe225bf55ab68f02c8a6"
@@ -511,7 +511,7 @@
   title: "Topics in Likelihood Inference"
   instructor: "Prof. Nancy Reid"
   term: "Winter 2022"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta4508h"
   lost: false
   url: "/files/course-notes/uoft-sta4508h-rz-notes.pdf"
   sha256: "a91ede02bad272bd62f3fbcef3eb9a2be0578e249de0c466f6deb8b3f2bd6ae2"
@@ -522,7 +522,7 @@
   title: "Optimal Transport: Theory and Algorithms"
   instructor: "Professor Leonard Wong"
   term: "Fall 2019"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta4519h"
   lost: false
   url: "/files/course-notes/uoft-sta4519h-rz-notes.pdf"
   sha256: "e63bc0c297877e3a70a389a0d2dee8ba696dce2f891251c3fdbed73594524c5b"
@@ -533,7 +533,7 @@
   title: "Dependence Modelling"
   instructor: "Prof. Silvana Pesenti"
   term: "Winter 2021"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta4528h"
   lost: false
   url: "/files/course-notes/uoft-sta4528h-rz-notes.pdf"
   sha256: "677991a629cc152a814a6d0caa67deef4fd23973d67535603c5b8d7082fb74b0"
@@ -544,7 +544,7 @@
   title: "Information Geometry"
   instructor: "Prof. Leonard Wong"
   term: "Fall 2022"
-  description_url: "https://www.statistics.utoronto.ca/graduate/graduate-course-descriptions"
+  description_url: "https://sgs.calendar.utoronto.ca/course/sta4531h"
   lost: false
   url: "/files/course-notes/uoft-sta4531h-rz-notes.pdf"
   sha256: "66db673130661684d7a57f6bdba278c2b8fce3e3b84456036a5cb5cf5f626c2f"
