@@ -51,13 +51,25 @@ author_profile: true
 {% assign institution_order = "University of Waterloo|University of Toronto" | split: "|" %}
 {% for institution_name in institution_order %}
   {% assign institution_notes = site.data.course_notes | where: "institution", institution_name %}
-  <h2><u>{{ institution_name }}</u></h2>
+  <h2>{{ institution_name }}</h2>
   <div class="course-note-list">
     {% for note in institution_notes %}
-      <div class="course-note-entry">
-        <strong>{{ note.course_code }}: {{ note.title }} - {{ note.term }}</strong>
-        {% if note.description_url %}<a href="{{ note.description_url }}">[Description]</a>{% endif %}
-        {% if note.lost %}(lost){% else %}<a href="{{ note.url | relative_url }}">[Notes]</a>{% endif %}
+      <div class="course-note-entry{% if note.lost %} course-note-entry--lost{% endif %}">
+        <div class="course-note-main">
+          <strong class="course-note-code">{{ note.course_code }}</strong>
+          <span class="course-note-title">{{ note.title }}</span>
+          <span class="course-note-term">{{ note.term }}</span>
+        </div>
+        <div class="course-note-actions">
+          {% if note.description_url %}<a href="{{ note.description_url }}">Description</a>{% endif %}
+          {% if note.lost %}
+            {% if note.description_url %}<span class="course-note-action-separator" aria-hidden="true">&middot;</span>{% endif %}
+            <span class="course-note-lost">(lost)</span>
+          {% else %}
+            {% if note.description_url %}<span class="course-note-action-separator" aria-hidden="true">&middot;</span>{% endif %}
+            <a href="{{ note.url | relative_url }}">Notes</a>
+          {% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>

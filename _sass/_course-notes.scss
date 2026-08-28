@@ -1,0 +1,74 @@
+/* ==========================================================================
+   COURSE NOTES DIRECTORY
+   ========================================================================== */
+
+.course-note-list {
+  margin: 0 0 2.5em;
+  border-top: 1px solid $border-color;
+}
+
+.course-note-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  column-gap: 1.25em;
+  align-items: baseline;
+  padding: 0.55em 0;
+  border-bottom: 1px solid $border-color;
+  line-height: 1.35;
+
+  @include breakpoint(max-width $small) {
+    grid-template-columns: 1fr;
+    row-gap: 0.25em;
+    padding: 0.65em 0;
+  }
+}
+
+.course-note-main {
+  min-width: 0;
+}
+
+.course-note-code {
+  margin-right: 0.35em;
+  white-space: nowrap;
+}
+
+.course-note-term {
+  color: $gray;
+  white-space: nowrap;
+
+  &::before {
+    margin: 0 0.45em 0 0.3em;
+    content: "\00b7";
+  }
+}
+
+.course-note-actions {
+  display: flex;
+  gap: 0.45em;
+  justify-content: flex-end;
+  align-items: baseline;
+  white-space: nowrap;
+  font-size: 0.875em;
+
+  a {
+    font-weight: 600;
+  }
+
+  @include breakpoint(max-width $small) {
+    justify-content: flex-start;
+    font-size: 0.8125em;
+  }
+}
+
+.course-note-action-separator {
+  color: $light-gray;
+}
+
+.course-note-entry--lost .course-note-main {
+  color: mix(#fff, $text-color, 40%);
+}
+
+.course-note-lost {
+  color: $gray;
+  font-style: italic;
+}
