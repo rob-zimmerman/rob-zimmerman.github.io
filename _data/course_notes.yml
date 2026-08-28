@@ -427,8 +427,8 @@
   term: "Winter 2021"
   lost: false
   url: "/files/course-notes/uoft-mat1128h-rz-notes.pdf"
-  sha256: "3e2ad2ab483ed8942a88dab6f1ed6eabf76416cd4347c9fc09235e48c1777757"
-  bytes: 1303406
+  sha256: "be6a7d6c6f874d05b159fa7c99a47ec4efc1be5c5f0734aa8141ed287d8012ac"
+  bytes: 1305708
 - id: "uoft-mat1601h"
   institution: "University of Toronto"
   course_code: "MAT 1601H"
