@@ -514,8 +514,8 @@
   description_url: "https://sgs.calendar.utoronto.ca/course/sta4508h"
   lost: false
   url: "/files/course-notes/uoft-sta4508h-rz-notes.pdf"
-  sha256: "97816d2a06366e9f4c504270575ef911f60460effc310bd9428bdebbb5b2fb1f"
-  bytes: 842425
+  sha256: "4618a0ecb178e4deeadf686386e799503cd97ce0faefff713894e4e5d9626626"
+  bytes: 842441
 - id: "uoft-sta4519h"
   institution: "University of Toronto"
   course_code: "STA 4519H"
