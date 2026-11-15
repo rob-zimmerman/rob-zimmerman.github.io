@@ -1,7 +1,7 @@
 ---
 permalink: /about/
-title: "About"
-excerpt: "About Robert Zimmerman"
+title: "Bio"
+excerpt: "Biography of Robert Zimmerman"
 author_profile: true
 ---
 

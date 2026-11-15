@@ -1,8 +1,5 @@
 # main links links
 main:
-  - title: "About"
-    url: /about/
-
   - title: "Publications and Projects"
     url: /publications/
 
@@ -20,4 +17,6 @@ main:
     
   - title: "CV"
     url: /cv/
-    
+
+  - title: "Bio"
+    url: /about/
