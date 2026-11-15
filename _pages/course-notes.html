@@ -3,8 +3,10 @@ layout: archive
 title: "Course Notes"
 permalink: /coursenotes/
 author_profile: true
-last_modified_at: 2026-08-28
+last_modified_at: 2026-11-15
 ---
+
+<p><a href="#course-notes-list">Go straight to the course notes</a></p>
 
 <p>
   These are typeset course notes from most (but not all<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>) of the courses I took as an undergrad at the University of Waterloo and as a PhD student at the University of Toronto.
@@ -52,7 +54,7 @@ last_modified_at: 2026-08-28
 {% assign institution_order = "University of Waterloo|University of Toronto" | split: "|" %}
 {% for institution_name in institution_order %}
   {% assign institution_notes = site.data.course_notes | where: "institution", institution_name %}
-  <h2>{{ institution_name }}</h2>
+  <h2{% if forloop.first %} id="course-notes-list"{% endif %}>{{ institution_name }}</h2>
   <div class="course-note-list">
     {% for note in institution_notes %}
       <div class="course-note-entry{% if note.lost %} course-note-entry--lost{% endif %}">
